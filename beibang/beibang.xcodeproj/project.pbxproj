@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61113E641C698B7A0051538D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E631C698B7A0051538D /* AppDelegate.swift */; };
+		61113E661C698B7A0051538D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E651C698B7A0051538D /* MainViewController.swift */; };
+		61113E691C698B7A0051538D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61113E671C698B7A0051538D /* Main.storyboard */; };
+		61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61113E6A1C698B7A0051538D /* beibang.xcdatamodeld */; };
+		61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61113E6D1C698B7A0051538D /* Assets.xcassets */; };
+		61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */; };
+		61113E7C1C698B7A0051538D /* beibangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E7B1C698B7A0051538D /* beibangTests.swift */; };
+		61113E871C698B7A0051538D /* beibangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E861C698B7A0051538D /* beibangUITests.swift */; };
+		61113E951C6990E30051538D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E941C6990E30051538D /* SignInViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61113E781C698B7A0051538D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61113E581C698B7A0051538D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61113E5F1C698B7A0051538D;
+			remoteInfo = beibang;
+		};
+		61113E831C698B7A0051538D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61113E581C698B7A0051538D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61113E5F1C698B7A0051538D;
+			remoteInfo = beibang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61113E601C698B7A0051538D /* beibang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beibang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61113E631C698B7A0051538D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		61113E651C698B7A0051538D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		61113E681C698B7A0051538D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61113E6B1C698B7A0051538D /* beibang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beibang.xcdatamodel; sourceTree = "<group>"; };
+		61113E6D1C698B7A0051538D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61113E701C698B7A0051538D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61113E721C698B7A0051538D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61113E771C698B7A0051538D /* beibangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beibangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61113E7B1C698B7A0051538D /* beibangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beibangTests.swift; sourceTree = "<group>"; };
+		61113E7D1C698B7A0051538D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61113E821C698B7A0051538D /* beibangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beibangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61113E861C698B7A0051538D /* beibangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beibangUITests.swift; sourceTree = "<group>"; };
+		61113E881C698B7A0051538D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61113E941C6990E30051538D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61113E5D1C698B7A0051538D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E741C698B7A0051538D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E7F1C698B7A0051538D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61113E571C698B7A0051538D = {
+			isa = PBXGroup;
+			children = (
+				61113E621C698B7A0051538D /* beibang */,
+				61113E7A1C698B7A0051538D /* beibangTests */,
+				61113E851C698B7A0051538D /* beibangUITests */,
+				61113E611C698B7A0051538D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61113E611C698B7A0051538D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61113E601C698B7A0051538D /* beibang.app */,
+				61113E771C698B7A0051538D /* beibangTests.xctest */,
+				61113E821C698B7A0051538D /* beibangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61113E621C698B7A0051538D /* beibang */ = {
+			isa = PBXGroup;
+			children = (
+				61113E631C698B7A0051538D /* AppDelegate.swift */,
+				61113E651C698B7A0051538D /* MainViewController.swift */,
+				61113E941C6990E30051538D /* SignInViewController.swift */,
+				61113E671C698B7A0051538D /* Main.storyboard */,
+				61113E6D1C698B7A0051538D /* Assets.xcassets */,
+				61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */,
+				61113E721C698B7A0051538D /* Info.plist */,
+				61113E6A1C698B7A0051538D /* beibang.xcdatamodeld */,
+			);
+			path = beibang;
+			sourceTree = "<group>";
+		};
+		61113E7A1C698B7A0051538D /* beibangTests */ = {
+			isa = PBXGroup;
+			children = (
+				61113E7B1C698B7A0051538D /* beibangTests.swift */,
+				61113E7D1C698B7A0051538D /* Info.plist */,
+			);
+			path = beibangTests;
+			sourceTree = "<group>";
+		};
+		61113E851C698B7A0051538D /* beibangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				61113E861C698B7A0051538D /* beibangUITests.swift */,
+				61113E881C698B7A0051538D /* Info.plist */,
+			);
+			path = beibangUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61113E5F1C698B7A0051538D /* beibang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61113E8B1C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibang" */;
+			buildPhases = (
+				61113E5C1C698B7A0051538D /* Sources */,
+				61113E5D1C698B7A0051538D /* Frameworks */,
+				61113E5E1C698B7A0051538D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = beibang;
+			productName = beibang;
+			productReference = 61113E601C698B7A0051538D /* beibang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61113E761C698B7A0051538D /* beibangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61113E8E1C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangTests" */;
+			buildPhases = (
+				61113E731C698B7A0051538D /* Sources */,
+				61113E741C698B7A0051538D /* Frameworks */,
+				61113E751C698B7A0051538D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61113E791C698B7A0051538D /* PBXTargetDependency */,
+			);
+			name = beibangTests;
+			productName = beibangTests;
+			productReference = 61113E771C698B7A0051538D /* beibangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61113E811C698B7A0051538D /* beibangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61113E911C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangUITests" */;
+			buildPhases = (
+				61113E7E1C698B7A0051538D /* Sources */,
+				61113E7F1C698B7A0051538D /* Frameworks */,
+				61113E801C698B7A0051538D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61113E841C698B7A0051538D /* PBXTargetDependency */,
+			);
+			name = beibangUITests;
+			productName = beibangUITests;
+			productReference = 61113E821C698B7A0051538D /* beibangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61113E581C698B7A0051538D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Akhaltech;
+				TargetAttributes = {
+					61113E5F1C698B7A0051538D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					61113E761C698B7A0051538D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 61113E5F1C698B7A0051538D;
+					};
+					61113E811C698B7A0051538D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 61113E5F1C698B7A0051538D;
+					};
+				};
+			};
+			buildConfigurationList = 61113E5B1C698B7A0051538D /* Build configuration list for PBXProject "beibang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61113E571C698B7A0051538D;
+			productRefGroup = 61113E611C698B7A0051538D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61113E5F1C698B7A0051538D /* beibang */,
+				61113E761C698B7A0051538D /* beibangTests */,
+				61113E811C698B7A0051538D /* beibangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61113E5E1C698B7A0051538D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */,
+				61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */,
+				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E751C698B7A0051538D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E801C698B7A0051538D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61113E5C1C698B7A0051538D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61113E951C6990E30051538D /* SignInViewController.swift in Sources */,
+				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
+				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
+				61113E641C698B7A0051538D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E731C698B7A0051538D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61113E7C1C698B7A0051538D /* beibangTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61113E7E1C698B7A0051538D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61113E871C698B7A0051538D /* beibangUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61113E791C698B7A0051538D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61113E5F1C698B7A0051538D /* beibang */;
+			targetProxy = 61113E781C698B7A0051538D /* PBXContainerItemProxy */;
+		};
+		61113E841C698B7A0051538D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61113E5F1C698B7A0051538D /* beibang */;
+			targetProxy = 61113E831C698B7A0051538D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61113E671C698B7A0051538D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61113E681C698B7A0051538D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61113E701C698B7A0051538D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61113E891C698B7A0051538D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61113E8A1C698B7A0051538D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61113E8C1C698B7A0051538D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = beibang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		61113E8D1C698B7A0051538D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = beibang/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		61113E8F1C698B7A0051538D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = beibangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beibang.app/beibang";
+			};
+			name = Debug;
+		};
+		61113E901C698B7A0051538D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = beibangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibangTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beibang.app/beibang";
+			};
+			name = Release;
+		};
+		61113E921C698B7A0051538D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = beibangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = beibang;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		61113E931C698B7A0051538D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = beibangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibangUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = beibang;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61113E5B1C698B7A0051538D /* Build configuration list for PBXProject "beibang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61113E891C698B7A0051538D /* Debug */,
+				61113E8A1C698B7A0051538D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61113E8B1C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61113E8C1C698B7A0051538D /* Debug */,
+				61113E8D1C698B7A0051538D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61113E8E1C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61113E8F1C698B7A0051538D /* Debug */,
+				61113E901C698B7A0051538D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		61113E911C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61113E921C698B7A0051538D /* Debug */,
+				61113E931C698B7A0051538D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		61113E6A1C698B7A0051538D /* beibang.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61113E6B1C698B7A0051538D /* beibang.xcdatamodel */,
+			);
+			currentVersion = 61113E6B1C698B7A0051538D /* beibang.xcdatamodel */;
+			path = beibang.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 61113E581C698B7A0051538D /* Project object */;
+}
