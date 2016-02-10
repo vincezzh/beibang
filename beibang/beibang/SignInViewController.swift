@@ -2,7 +2,7 @@
 //  SignInViewController.swift
 //  beibang
 //
-//  Created by Zhehan Zhang on 2016-02-08.
+//  Created by Zhehan Zhang on 2016-02-09.
 //  Copyright © 2016 Akhaltech. All rights reserved.
 //
 
@@ -10,36 +10,42 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var block1View: UIView!
-    @IBOutlet weak var block2View: UIView!
-    @IBOutlet weak var block3View: UIView!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let blockBorderColor = UIColor(red:154/255.0, green:127/255.0, blue:252/255.0, alpha: 1.0).CGColor
-        block1View.layer.borderWidth = 1
-        block1View.layer.borderColor = blockBorderColor
-        block2View.layer.borderWidth = 1
-        block2View.layer.borderColor = blockBorderColor
-        block3View.layer.borderWidth = 1
-        block3View.layer.borderColor = blockBorderColor
+        
+        initializeDecoration()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func initializeDecoration() {
+        title = "登录"
+        
+        usernameTextField.borderStyle = UITextBorderStyle.RoundedRect
+        let leftUsernameImageView = UIImageView()
+        leftUsernameImageView.image = UIImage(named: "avatar")
+        let leftUsernameView = UIView()
+        leftUsernameView.addSubview(leftUsernameImageView)
+        leftUsernameView.frame = CGRectMake(0, 0, 35, 25)
+        leftUsernameImageView.frame = CGRectMake(5, 0, 25, 25)
+        usernameTextField.leftView = leftUsernameView
+        usernameTextField.leftViewMode = UITextFieldViewMode.Always
+        
+        passwordTextField.borderStyle = UITextBorderStyle.RoundedRect
+        let leftPasswordImageView = UIImageView()
+        leftPasswordImageView.image = UIImage(named: "avatar")
+        let leftPasswordView = UIView()
+        leftPasswordView.addSubview(leftPasswordImageView)
+        leftPasswordView.frame = CGRectMake(0, 0, 35, 25)
+        leftPasswordImageView.frame = CGRectMake(5, 0, 25, 25)
+        passwordTextField.leftView = leftPasswordView
+        passwordTextField.leftViewMode = UITextFieldViewMode.Always
+        
+        signInButton.layer.cornerRadius = 5
+        registerButton.layer.cornerRadius = 5
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -15,7 +15,10 @@
 		61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */; };
 		61113E7C1C698B7A0051538D /* beibangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E7B1C698B7A0051538D /* beibangTests.swift */; };
 		61113E871C698B7A0051538D /* beibangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E861C698B7A0051538D /* beibangUITests.swift */; };
-		61113E951C6990E30051538D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E941C6990E30051538D /* SignInViewController.swift */; };
+		61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E941C6990E30051538D /* SignInEntryViewController.swift */; };
+		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
+		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
+		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,10 @@
 		61113E821C698B7A0051538D /* beibangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beibangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61113E861C698B7A0051538D /* beibangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beibangUITests.swift; sourceTree = "<group>"; };
 		61113E881C698B7A0051538D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61113E941C6990E30051538D /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		61113E941C6990E30051538D /* SignInEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInEntryViewController.swift; sourceTree = "<group>"; };
+		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
+		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,10 @@
 			children = (
 				61113E631C698B7A0051538D /* AppDelegate.swift */,
 				61113E651C698B7A0051538D /* MainViewController.swift */,
-				61113E941C6990E30051538D /* SignInViewController.swift */,
+				61113E941C6990E30051538D /* SignInEntryViewController.swift */,
+				618426D61C6AE25200A1E5DA /* SignInViewController.swift */,
+				618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */,
+				618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */,
 				61113E671C698B7A0051538D /* Main.storyboard */,
 				61113E6D1C698B7A0051538D /* Assets.xcassets */,
 				61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61113E951C6990E30051538D /* SignInViewController.swift in Sources */,
+				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
+				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
+				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
+				618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */,
 				61113E641C698B7A0051538D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +504,7 @@
 				61113E8D1C698B7A0051538D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61113E8E1C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +513,7 @@
 				61113E901C698B7A0051538D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61113E911C698B7A0051538D /* Build configuration list for PBXNativeTarget "beibangUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +522,7 @@
 				61113E931C698B7A0051538D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
