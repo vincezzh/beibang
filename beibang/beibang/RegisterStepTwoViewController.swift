@@ -14,19 +14,27 @@ class RegisterStepTwoViewController: UIViewController, UIImagePickerControllerDe
     @IBOutlet weak var willBePregnantButton: UIButton!
     @IBOutlet weak var willBePregnantLabel: UILabel!
     @IBOutlet weak var willBePregnantDoneButton: UIButton!
-    @IBOutlet weak var willBePregnantView: UIView!
+    @IBOutlet weak var willBePregnantBottomLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var willBePregnantButtonLeadingLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var willBePregnantLabelLeadingLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var willBeMomButton: UIButton!
     @IBOutlet weak var willBeMomLabel: UILabel!
     @IBOutlet weak var willBeMomDateTextfield: UITextField!
     @IBOutlet weak var willBeMomDoneButton: UIButton!
-    @IBOutlet weak var willBeMomView: UIView!
+    @IBOutlet weak var willBeMomBottomLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var hasBeenMomButton: UIButton!
     @IBOutlet weak var hasBeenMomLabel: UILabel!
     @IBOutlet weak var hasBeenMomBabyNameTextfield: UITextField!
     @IBOutlet weak var hasBeenMomBabyBirthdayTextfield: UITextField!
     @IBOutlet weak var hasBeenMomSetMainPageButton: UIButton!
     @IBOutlet weak var hasBeenMomDoneButton: UIButton!
-    @IBOutlet weak var hasBeenMomView: UIView!
+    @IBOutlet weak var hasBeenMomBottomLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hasBeenMomButtonTrailingLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var hasBeenMomLabelTrailingLayoutConstraint: NSLayoutConstraint!
+    
+    var willBePregnantViewIsShown = false
+    var willBeMomViewIsShown = false
+    var hasBeenMomViewShown = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,47 +106,62 @@ class RegisterStepTwoViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func clickWillBePregnantButton(sender: AnyObject) {
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                self.willBeMomButton.alpha = 0
-                self.willBeMomLabel.alpha = 0
-                self.hasBeenMomButton.alpha = 0
-                self.hasBeenMomLabel.alpha = 0
-            }) { (result: Bool) -> Void in
-                UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                    let screenCenterX = UIScreen.mainScreen().bounds.width / 2
-                    self.willBePregnantButton.center = CGPointMake(screenCenterX, self.willBePregnantButton.center.y)
-                    self.willBePregnantLabel.center = CGPointMake(screenCenterX, self.willBePregnantLabel.center.y)
-                    self.willBePregnantView.center = CGPointMake(self.willBePregnantView.center.x, self.willBePregnantView.center.y - 91)
+        if !willBePregnantViewIsShown {
+            willBePregnantViewIsShown = true
+            
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                    self.willBeMomButton.alpha = 0
+                    self.willBeMomLabel.alpha = 0
+                    self.hasBeenMomButton.alpha = 0
+                    self.hasBeenMomLabel.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        let screenCenterX = UIScreen.mainScreen().bounds.width / 2
+                        self.willBePregnantButtonLeadingLayoutConstraint.constant += (screenCenterX - 20 - 20 - self.willBePregnantButton.bounds.size.width/2)
+                        self.willBePregnantLabelLeadingLayoutConstraint.constant += (screenCenterX - 36 - 20 - self.willBePregnantLabel.bounds.size.width/2)
+                        self.willBePregnantBottomLayoutConstraint.constant += 91
+                        self.view.layoutIfNeeded()
                     }, completion: nil)
+            }
         }
     }
     
     @IBAction func clickWillBeMomButton(sender: AnyObject) {
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.willBePregnantButton.alpha = 0
-            self.willBePregnantLabel.alpha = 0
-            self.hasBeenMomButton.alpha = 0
-            self.hasBeenMomLabel.alpha = 0
-            }) { (result: Bool) -> Void in
-                UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                    self.willBeMomView.center = CGPointMake(self.willBeMomView.center.x, self.willBeMomView.center.y - 237)
-                    }, completion: nil)
+        if !willBeMomViewIsShown {
+            willBeMomViewIsShown = true
+            
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                self.willBePregnantButton.alpha = 0
+                self.willBePregnantLabel.alpha = 0
+                self.hasBeenMomButton.alpha = 0
+                self.hasBeenMomLabel.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        self.willBeMomBottomLayoutConstraint.constant += 237
+                        self.view.layoutIfNeeded()
+                        }, completion: nil)
+            }
         }
     }
     
     @IBAction func clickHasBeenMomButton(sender: AnyObject) {
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.willBeMomButton.alpha = 0
-            self.willBeMomLabel.alpha = 0
-            self.willBePregnantButton.alpha = 0
-            self.willBePregnantLabel.alpha = 0
-            }) { (result: Bool) -> Void in
-                UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                    let screenCenterX = UIScreen.mainScreen().bounds.width / 2
-                    self.hasBeenMomButton.center = CGPointMake(screenCenterX, self.hasBeenMomButton.center.y)
-                    self.hasBeenMomLabel.center = CGPointMake(screenCenterX, self.hasBeenMomLabel.center.y)
-                    self.hasBeenMomView.center = CGPointMake(self.hasBeenMomView.center.x, self.hasBeenMomView.center.y - 307)
-                    }, completion: nil)
+        if !hasBeenMomViewShown {
+            hasBeenMomViewShown = true
+            
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                self.willBeMomButton.alpha = 0
+                self.willBeMomLabel.alpha = 0
+                self.willBePregnantButton.alpha = 0
+                self.willBePregnantLabel.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        let screenCenterX = UIScreen.mainScreen().bounds.width / 2
+                        self.hasBeenMomButtonTrailingLayoutConstraint.constant += (screenCenterX - 20 - 20 - self.hasBeenMomButton.bounds.size.width/2)
+                        self.hasBeenMomLabelTrailingLayoutConstraint.constant += (screenCenterX - 21 - 20 - self.hasBeenMomLabel.bounds.size.width/2)
+                        self.hasBeenMomBottomLayoutConstraint.constant += 307
+                        self.view.layoutIfNeeded()
+                        }, completion: nil)
+            }
         }
     }
     
