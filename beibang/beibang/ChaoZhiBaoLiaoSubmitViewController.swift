@@ -13,6 +13,8 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
     var bool: Bool = true
     let placeholderName = "商品标题"
     let placeholderReason = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！"
+    var textViewY: CGFloat = 0.0
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
 
     @IBOutlet weak var itemTItleTextView: UITextView!
     @IBOutlet weak var imagesView: UIView!
@@ -20,8 +22,7 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var fromStoreLabel: UILabel!
     @IBOutlet weak var buyReasonTextView: UITextView!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var keyboardLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var contentScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,15 +83,20 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
         let keyboardViewEndFrame = view.convertRect(keyboardScreenEndFrame, fromView: view.window)
         let originDelta = abs((keyboardViewEndFrame.origin.y - keyboardViewBeginFrame.origin.y))
         
-        // The text view should be adjusted, update the constant for this constraint.
-        if showsKeyboard {
-            keyboardLayoutConstraint.constant -= originDelta
-        }else {
-            keyboardLayoutConstraint.constant += originDelta
-        }
         UIView.animateWithDuration(animationDuration, delay: 0, options: .BeginFromCurrentState, animations: {
-            self.itemLabel.layoutIfNeeded()
+            if showsKeyboard {
+                if self.textViewY < originDelta {
+                    self.contentScrollView.contentOffset.y += originDelta
+                }
+            }else {
+//                keyboardLayoutConstraint.constant += originDelta
+            }
             }, completion: nil)
+    }
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        textViewY = screenSize.height + contentScrollView.contentOffset.y - textView.frame.origin.y - textView.frame.size.height
+        return true
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {

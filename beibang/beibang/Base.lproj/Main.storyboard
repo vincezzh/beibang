@@ -488,12 +488,11 @@
                     </view>
                     <connections>
                         <outlet property="buyReasonTextView" destination="v3B-0B-DI9" id="8X4-bC-0u5"/>
+                        <outlet property="contentScrollView" destination="pHC-A8-KUy" id="O5h-ti-idE"/>
                         <outlet property="fromStoreLabel" destination="F0r-by-J7C" id="ssH-PK-Ybz"/>
                         <outlet property="fromStorePriceLabel" destination="v4g-JF-YHw" id="A4N-yx-Hil"/>
                         <outlet property="imagesView" destination="Rmo-DH-cEE" id="d3k-bl-C0l"/>
-                        <outlet property="itemLabel" destination="FBZ-Gs-Xca" id="cJb-6E-f9t"/>
                         <outlet property="itemTItleTextView" destination="L42-EF-6G8" id="kpE-Ip-uiq"/>
-                        <outlet property="keyboardLayoutConstraint" destination="lJB-Lv-66e" id="vxW-x5-DLv"/>
                         <outlet property="submitButton" destination="VWR-ML-xmR" id="s6p-zk-zos"/>
                     </connections>
                 </viewController>
