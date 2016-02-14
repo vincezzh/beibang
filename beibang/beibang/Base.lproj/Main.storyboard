@@ -203,9 +203,31 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rmo-DH-cEE">
                                                 <rect key="frame" x="20" y="139" width="560" height="100"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="962-aj-BBG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jR5-7Y-JFe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="jR5-7Y-JFe" firstAttribute="top" secondItem="962-aj-BBG" secondAttribute="top" id="RYW-Ua-Zkw"/>
+                                                            <constraint firstAttribute="trailing" secondItem="jR5-7Y-JFe" secondAttribute="trailing" id="TTj-C8-IPe"/>
+                                                            <constraint firstAttribute="bottom" secondItem="jR5-7Y-JFe" secondAttribute="bottom" id="abe-Am-HIf"/>
+                                                            <constraint firstItem="jR5-7Y-JFe" firstAttribute="centerX" secondItem="962-aj-BBG" secondAttribute="centerX" id="fnm-IB-Qok"/>
+                                                            <constraint firstItem="jR5-7Y-JFe" firstAttribute="leading" secondItem="962-aj-BBG" secondAttribute="leading" id="glV-lX-s6D"/>
+                                                            <constraint firstItem="jR5-7Y-JFe" firstAttribute="centerY" secondItem="962-aj-BBG" secondAttribute="centerY" id="maa-B2-4HB"/>
+                                                        </constraints>
+                                                    </scrollView>
+                                                </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="962-aj-BBG" firstAttribute="top" secondItem="Rmo-DH-cEE" secondAttribute="top" id="2Gt-Jp-RkU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="962-aj-BBG" secondAttribute="trailing" id="Jvc-dQ-mC9"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="YLf-bp-oho"/>
+                                                    <constraint firstAttribute="bottom" secondItem="962-aj-BBG" secondAttribute="bottom" id="h0X-AX-QsG"/>
+                                                    <constraint firstItem="962-aj-BBG" firstAttribute="leading" secondItem="Rmo-DH-cEE" secondAttribute="leading" id="lZR-XS-nJR"/>
                                                     <constraint firstAttribute="height" constant="100" id="qnV-fF-aeH"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="vfQ-W7-SpO"/>
                                                     <constraint firstAttribute="height" constant="2" id="y8i-4N-XeT"/>
@@ -240,7 +262,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="F0r-by-J7C" secondAttribute="trailing" constant="8" id="0bq-92-1lN"/>
                                                     <constraint firstItem="C4o-GP-5HE" firstAttribute="top" secondItem="kCE-AU-IgO" secondAttribute="top" constant="8" id="C78-01-dVg"/>
@@ -285,7 +306,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="3nf-c9-fx4"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="6tH-uS-hkV"/>
@@ -309,7 +329,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-RE-P23">
                                                 <rect key="frame" x="299" y="247" width="2" height="90"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="6P9-ol-ZSB"/>
                                                     <constraint firstAttribute="height" constant="90" id="NzL-yf-MMI"/>
@@ -488,10 +507,11 @@
                     </view>
                     <connections>
                         <outlet property="buyReasonTextView" destination="v3B-0B-DI9" id="8X4-bC-0u5"/>
+                        <outlet property="contentImagesScrollView" destination="962-aj-BBG" id="bLd-sm-DOZ"/>
+                        <outlet property="contentImagesView" destination="jR5-7Y-JFe" id="U1x-5R-5fE"/>
                         <outlet property="contentScrollView" destination="pHC-A8-KUy" id="O5h-ti-idE"/>
                         <outlet property="fromStoreLabel" destination="F0r-by-J7C" id="ssH-PK-Ybz"/>
                         <outlet property="fromStorePriceLabel" destination="v4g-JF-YHw" id="A4N-yx-Hil"/>
-                        <outlet property="imagesView" destination="Rmo-DH-cEE" id="d3k-bl-C0l"/>
                         <outlet property="itemTItleTextView" destination="L42-EF-6G8" id="kpE-Ip-uiq"/>
                         <outlet property="submitButton" destination="VWR-ML-xmR" id="s6p-zk-zos"/>
                     </connections>

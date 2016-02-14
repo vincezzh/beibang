@@ -15,9 +15,11 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
     let placeholderReason = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！"
     var textViewY: CGFloat = 0.0
     let screenSize: CGRect = UIScreen.mainScreen().bounds
+    var currentTextView: UITextView?
 
     @IBOutlet weak var itemTItleTextView: UITextView!
-    @IBOutlet weak var imagesView: UIView!
+    @IBOutlet weak var contentImagesView: UIView!
+    @IBOutlet weak var contentImagesScrollView: UIScrollView!
     @IBOutlet weak var fromStorePriceLabel: UILabel!
     @IBOutlet weak var fromStoreLabel: UILabel!
     @IBOutlet weak var buyReasonTextView: UITextView!
@@ -29,6 +31,12 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
 
         initializeDecoration()
         initializeAction()
+        
+        addImagesInImageView(["http://www.akhaltech.com/img/profile.png",
+            "http://www.akhaltech.com/img/profile.png",
+            "http://www.akhaltech.com/img/profile.png",
+            "http://www.akhaltech.com/img/profile.png",
+            "http://www.akhaltech.com/img/profile.png"])
     }
 
     func initializeDecoration() {
@@ -41,6 +49,7 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+        addDoneToolBarToKeyboard(buyReasonTextView)
         
         itemTItleTextView.delegate = self
         itemTItleTextView.tag = 1
@@ -89,12 +98,28 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
                     self.contentScrollView.contentOffset.y += originDelta
                 }
             }else {
-//                keyboardLayoutConstraint.constant += originDelta
+                if self.textViewY < originDelta {
+                    self.contentScrollView.contentOffset.y -= originDelta
+                }
             }
             }, completion: nil)
     }
     
+    func addDoneToolBarToKeyboard(textView: UITextView) {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+        doneToolbar.barStyle = UIBarStyle.BlackTranslucent
+        doneToolbar.items = [UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonClickedDismissKeyboard")]
+        doneToolbar.sizeToFit()
+        textView.inputAccessoryView = doneToolbar
+    }
+    
+    func doneButtonClickedDismissKeyboard() {
+        currentTextView?.resignFirstResponder()
+    }
+    
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        currentTextView = textView
         textViewY = screenSize.height + contentScrollView.contentOffset.y - textView.frame.origin.y - textView.frame.size.height
         return true
     }
@@ -130,6 +155,24 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
             if textView.textColor == UIColor.lightGrayColor() {
                 textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
             }
+        }
+    }
+    
+    func addImagesInImageView(images: [String]) {
+        for index in 0...images.count-1 {
+            let imgURL: NSURL = NSURL(string: images[index])!
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(
+                request, queue: NSOperationQueue.mainQueue(),
+                completionHandler: {(response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+                    if error == nil {
+                        let imageView: UIImageView = UIImageView(image: UIImage(data: data!))
+                        imageView.contentMode = UIViewContentMode.ScaleAspectFit
+                        imageView.frame = CGRect(x: (index * 100), y: 0, width: 100, height: 100)
+                        self.contentImagesView.addSubview(imageView)
+                        self.contentImagesScrollView.contentSize = CGSizeMake(CGFloat(images.count * 100), 100)
+                    }
+            })
         }
     }
 
