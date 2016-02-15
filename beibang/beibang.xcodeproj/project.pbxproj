@@ -21,6 +21,7 @@
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
+		61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */; };
 		61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
+		61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoEditorViewController.swift; sourceTree = "<group>"; };
 		61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiBaoLiaoSubmitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 			children = (
 				611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */,
 				61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */,
+				61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */,
 			);
 			name = TouGaoViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
 				611EF6401C6E7E2000469639 /* UNAlertView.swift in Sources */,
+				61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */,
 				618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */,
 				61113E641C698B7A0051538D /* AppDelegate.swift in Sources */,
 				61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */,
