@@ -17,6 +17,17 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     let placeholder1 = "足够有趣的标题能吸引更多的爸爸妈妈们！当然，一句充满创意的标题，必须包含详细的品牌，产品名以及型号。"
     let placeholder2 = "给宝宝买到了什么好东西？还是作为辣妈奶爸的你给自己拔了颗草？请把你的购物心情和好产品的心得体验分享到这里，通过图文并茂的方式把好产品晒出来吧！同时请对产品外观细节、做工、功能以及使用体验或是购买心得（如：转运规则、尺码信息等）给大家介绍介绍。高品质产品、高人气新品、新奇特好物不仅能得到更多额外奖励，还会让更多宝妈奶爸成为你的粉丝哦！Tips：内文请勿少于5张图片，精美的细节图能大大增加分享的可读性，也就大大增加了众测中奖的机会:)"
     let placeholder3 = "真实的购买链接能够帮助爸爸妈妈们无困难剁手，还有可能让你的分享变成精华帖置顶哦！方式1：使用浏览器可直接拷贝黏贴商品详情页地址，使用APP购买的可以在商品详情页面上点击—复制，然后回到这里粘贴即可；方式2：将订单详情页面截图（iOS：home+电源；Android：电源+音量上），点击左下方照相机图标上传；"
+    var tagButtonArray = [
+        ["placeholder", true, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"],
+        ["placeholder", false, "label"]
+    ]
 
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var titleTextView: BlogEditor!
@@ -97,15 +108,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         itemLevelButton5.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         setItemLevel(5)
         
-        addTagsInTagScrollView(["placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder",
-            "placeholder"])
+        addTagsInTagScrollView()
     }
     
     deinit {
@@ -156,18 +159,37 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         }
     }
     
-    func addTagsInTagScrollView(images: [String]) {
-        for index in 0...images.count-1 {
-            let image = UIImage(named: images[index])
+    func addTagsInTagScrollView() {
+        for index in 0...tagButtonArray.count-1 {
+            let attributeArray = tagButtonArray[index]
+            let image = UIImage(named: attributeArray[0] as! String)
             let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             let tagButton = UIButton()
+            tagButton.tag = index
             tagButton.setImage(tintedImage, forState: UIControlState.Normal)
-            tagButton.tintColor = UIColor.lightGrayColor()
+            let isActive = attributeArray[1] as! Bool
+            if isActive {
+                tagButton.tintColor = UIColor(red:154/255.0, green:127/255.0, blue:252/255.0, alpha: 1.0)
+            }else {
+                tagButton.tintColor = UIColor.lightGrayColor()
+            }
             tagButton.frame = CGRect(x: (index * 55), y: 0, width: 30, height: 50)
             tagButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            tagButton.addTarget(self, action: "clickTagButton:", forControlEvents: UIControlEvents.TouchUpInside)
             tagScrollView.addSubview(tagButton)
-            tagScrollView.contentSize = CGSizeMake(CGFloat(images.count * 55), 60)
+            tagScrollView.contentSize = CGSizeMake(CGFloat(tagButtonArray.count * 55), 60)
         }
+    }
+    
+    func clickTagButton(sender: UIButton!) {
+        let attributeArray = tagButtonArray[sender.tag]
+        let isActive = attributeArray[1] as! Bool
+        if isActive {
+            sender.tintColor = UIColor.lightGrayColor()
+        }else {
+            sender.tintColor = UIColor(red:154/255.0, green:127/255.0, blue:252/255.0, alpha: 1.0)
+        }
+        tagButtonArray[sender.tag][1] = !isActive
     }
     
     func handleKeyboardWillShowNotification(notification: NSNotification) {
