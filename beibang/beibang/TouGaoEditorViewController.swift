@@ -26,6 +26,13 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var containerScrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var tagScrollView: UIScrollView!
+    @IBOutlet weak var itemLevelButton1: UIButton!
+    @IBOutlet weak var itemLevelButton2: UIButton!
+    @IBOutlet weak var itemLevelButton3: UIButton!
+    @IBOutlet weak var itemLevelButton4: UIButton!
+    @IBOutlet weak var itemLevelButton5: UIButton!
+    @IBOutlet weak var itemLevelLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +77,97 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         tap.delegate = self
         titleImageView.userInteractionEnabled = true
         titleImageView.addGestureRecognizer(tap)
+        
+        let image = UIImage(named: "placeholder")
+        let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton1.tintColor = UIColor.lightGrayColor()
+        itemLevelButton1.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton2.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton2.tintColor = UIColor.lightGrayColor()
+        itemLevelButton2.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton3.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton3.tintColor = UIColor.lightGrayColor()
+        itemLevelButton3.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton4.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton4.tintColor = UIColor.lightGrayColor()
+        itemLevelButton4.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton5.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton5.tintColor = UIColor.lightGrayColor()
+        itemLevelButton5.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        setItemLevel(5)
+        
+        addTagsInTagScrollView(["placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder",
+            "placeholder"])
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    @IBAction func clickItemLevelButton1(sender: AnyObject) {
+        setItemLevel(1)
+    }
+    @IBAction func clickItemLevelButton2(sender: AnyObject) {
+        setItemLevel(2)
+    }
+    @IBAction func clickItemLevelButton3(sender: AnyObject) {
+        setItemLevel(3)
+    }
+    @IBAction func clickItemLevelButton4(sender: AnyObject) {
+        setItemLevel(4)
+    }
+    @IBAction func clickItemLevelButton5(sender: AnyObject) {
+        setItemLevel(5)
+    }
+    
+    func setItemLevel(level: Int) {
+        let levelLabels = ["凑合", "还行~", "不错~", "很棒！", "神奇！"]
+        itemLevelButton1.tintColor = UIColor.lightGrayColor()
+        itemLevelButton2.tintColor = UIColor.lightGrayColor()
+        itemLevelButton3.tintColor = UIColor.lightGrayColor()
+        itemLevelButton4.tintColor = UIColor.lightGrayColor()
+        itemLevelButton5.tintColor = UIColor.lightGrayColor()
+        itemLevelLabel.text = levelLabels[level - 1]
+        switch level {
+            case 5:
+                itemLevelButton5.tintColor = UIColor.orangeColor()
+                fallthrough
+            case 4:
+                itemLevelButton4.tintColor = UIColor.orangeColor()
+                fallthrough
+            case 3:
+                itemLevelButton3.tintColor = UIColor.orangeColor()
+                fallthrough
+            case 2:
+                itemLevelButton2.tintColor = UIColor.orangeColor()
+                fallthrough
+            case 1:
+                itemLevelButton1.tintColor = UIColor.orangeColor()
+            default:
+                print("Wrong level")
+        }
+    }
+    
+    func addTagsInTagScrollView(images: [String]) {
+        for index in 0...images.count-1 {
+            let image = UIImage(named: images[index])
+            let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            let tagButton = UIButton()
+            tagButton.setImage(tintedImage, forState: UIControlState.Normal)
+            tagButton.tintColor = UIColor.lightGrayColor()
+            tagButton.frame = CGRect(x: (index * 55), y: 0, width: 30, height: 50)
+            tagButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            tagScrollView.addSubview(tagButton)
+            tagScrollView.contentSize = CGSizeMake(CGFloat(images.count * 55), 60)
+        }
     }
     
     func handleKeyboardWillShowNotification(notification: NSNotification) {
