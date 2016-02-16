@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlogEditor: UITextView, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIPopoverPresentationControllerDelegate, UITextViewDelegate {
+class BlogEditor: UITextView, UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIPopoverPresentationControllerDelegate {
     
     let defaultFontSize: CGFloat = 18.0
     var fontSize: CGFloat = 18.0
@@ -19,9 +19,7 @@ class BlogEditor: UITextView, UIImagePickerControllerDelegate, UIActionSheetDele
     var fullMode = true
 
     override func drawRect(rect: CGRect) {
-        self.delegate = self
         self.dataDetectorTypes = UIDataDetectorTypes.All
-        
         
         initializeToolbar()
     }

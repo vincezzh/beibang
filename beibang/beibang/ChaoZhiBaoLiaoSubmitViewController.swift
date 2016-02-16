@@ -11,18 +11,18 @@ import UIKit
 class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
     
     var bool: Bool = true
-    let placeholderName = "商品标题"
-    let placeholderReason = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！"
     var textViewY: CGFloat = 0.0
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     var currentTextView: UITextView?
+    let placeholderName = "商品标题"
+    let placeholderReason = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！"
 
-    @IBOutlet weak var itemTItleTextView: UITextView!
+    @IBOutlet weak var itemTitleTextView: BlogEditor!
     @IBOutlet weak var contentImagesView: UIView!
     @IBOutlet weak var contentImagesScrollView: UIScrollView!
     @IBOutlet weak var fromStorePriceLabel: UILabel!
     @IBOutlet weak var fromStoreLabel: UILabel!
-    @IBOutlet weak var buyReasonTextView: UITextView!
+    @IBOutlet weak var buyReasonTextView: BlogEditor!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var contentScrollView: UIScrollView!
     
@@ -49,19 +49,22 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
-        addDoneToolBarToKeyboard(buyReasonTextView)
         
-        itemTItleTextView.delegate = self
-        itemTItleTextView.tag = 1
-        itemTItleTextView.text = placeholderName
-        itemTItleTextView.textColor = UIColor.lightGrayColor()
-        itemTItleTextView.selectedTextRange = itemTItleTextView.textRangeFromPosition(itemTItleTextView.beginningOfDocument, toPosition: itemTItleTextView.beginningOfDocument)
+        itemTitleTextView.delegate = self
+        itemTitleTextView.tag = 1
+        itemTitleTextView.text = placeholderName
+        itemTitleTextView.textColor = UIColor.lightGrayColor()
+        itemTitleTextView.selectedTextRange = itemTitleTextView.textRangeFromPosition(itemTitleTextView.beginningOfDocument, toPosition: itemTitleTextView.beginningOfDocument)
+        itemTitleTextView.viewController = self
+        itemTitleTextView.fullMode = false
         
         buyReasonTextView.delegate = self
         buyReasonTextView.tag = 2
         buyReasonTextView.text = placeholderReason
         buyReasonTextView.textColor = UIColor.lightGrayColor()
         buyReasonTextView.selectedTextRange = buyReasonTextView.textRangeFromPosition(buyReasonTextView.beginningOfDocument, toPosition: buyReasonTextView.beginningOfDocument)
+        buyReasonTextView.viewController = self
+        buyReasonTextView.fullMode = false
     }
     
     deinit {
@@ -105,22 +108,9 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
             }, completion: nil)
     }
     
-    func addDoneToolBarToKeyboard(textView: UITextView) {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-        doneToolbar.barStyle = UIBarStyle.BlackTranslucent
-        doneToolbar.items = [UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonClickedDismissKeyboard")]
-        doneToolbar.sizeToFit()
-        textView.inputAccessoryView = doneToolbar
-    }
-    
-    func doneButtonClickedDismissKeyboard() {
-        currentTextView?.resignFirstResponder()
-    }
-    
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         currentTextView = textView
-        textViewY = screenSize.height + contentScrollView.contentOffset.y - textView.frame.origin.y - textView.frame.size.height
+        textViewY = screenSize.height + contentScrollView.contentOffset.y + 64 - textView.frame.origin.y - textView.frame.size.height
         return true
     }
     

@@ -12,7 +12,7 @@ class ChaoZhiBaoLiaoViewController: UIViewController, UITextViewDelegate {
 
     let placeholder = "请通过购物App中使用系统分享或浏览器打开商品页面获取商品链接"
     
-    @IBOutlet weak var urlLinkTextView: UITextView!
+    @IBOutlet weak var urlLinkTextView: BlogEditor!
     @IBOutlet weak var checkItemButton: UIButton!
     
     override func viewDidLoad() {
@@ -33,6 +33,8 @@ class ChaoZhiBaoLiaoViewController: UIViewController, UITextViewDelegate {
         urlLinkTextView.text = placeholder
         urlLinkTextView.textColor = UIColor.lightGrayColor()
         urlLinkTextView.selectedTextRange = urlLinkTextView.textRangeFromPosition(urlLinkTextView.beginningOfDocument, toPosition: urlLinkTextView.beginningOfDocument)
+        urlLinkTextView.viewController = self
+        urlLinkTextView.fullMode = false
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {

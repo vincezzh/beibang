@@ -95,7 +95,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="足够有趣的标题能吸引更多的爸爸妈妈们！当然，一句充满创意的标题，必须包含详细的品牌，产品名以及型号。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z1P-FN-oOX">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" text="足够有趣的标题能吸引更多的爸爸妈妈们！当然，一句充满创意的标题，必须包含详细的品牌，产品名以及型号。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z1P-FN-oOX" customClass="BlogEditor" customModule="beibang" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="177" width="560" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -231,7 +231,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D5h-Eg-uNd">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D5h-Eg-uNd" customClass="BlogEditor" customModule="beibang" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="971" width="560" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -436,7 +436,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请通过购物App中使用系统分享或浏览器打开商品页面获取商品链接" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DOx-LP-GOG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请通过购物App中使用系统分享或浏览器打开商品页面获取商品链接" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DOx-LP-GOG" customClass="BlogEditor" customModule="beibang" customModuleProvider="target">
                                 <rect key="frame" x="20" y="105" width="560" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -504,7 +504,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="商品标题" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L42-EF-6G8">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="商品标题" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L42-EF-6G8" customClass="BlogEditor" customModule="beibang" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="41" width="560" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -725,7 +725,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v3B-0B-DI9">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！除了罗列品牌和参数，如果你有什么真实体验，也请一并分享出来。另外购买时一些需要注意的小细节，比如是否用券，或者参加满减活动等等，描述出来，让大家买的更快更爽！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v3B-0B-DI9" customClass="BlogEditor" customModule="beibang" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="378" width="560" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -847,7 +847,7 @@
                         <outlet property="contentScrollView" destination="pHC-A8-KUy" id="O5h-ti-idE"/>
                         <outlet property="fromStoreLabel" destination="F0r-by-J7C" id="ssH-PK-Ybz"/>
                         <outlet property="fromStorePriceLabel" destination="v4g-JF-YHw" id="A4N-yx-Hil"/>
-                        <outlet property="itemTItleTextView" destination="L42-EF-6G8" id="kpE-Ip-uiq"/>
+                        <outlet property="itemTitleTextView" destination="L42-EF-6G8" id="W0E-WF-FFG"/>
                         <outlet property="submitButton" destination="VWR-ML-xmR" id="s6p-zk-zos"/>
                     </connections>
                 </viewController>
