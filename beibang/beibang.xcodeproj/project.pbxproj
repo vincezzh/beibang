@@ -22,6 +22,10 @@
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
 		61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */; };
+		61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC61C7245D500EEC642 /* BlogEditor.swift */; };
+		61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E1FAC81C72486300EEC642 /* colorPalette.plist */; };
+		61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC91C72486300EEC642 /* ColorPickerViewController.swift */; };
+		61E1FACD1C72486300EEC642 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FACA1C72486300EEC642 /* Notice.swift */; };
 		61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +68,10 @@
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
 		61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoEditorViewController.swift; sourceTree = "<group>"; };
+		61E1FAC61C7245D500EEC642 /* BlogEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEditor.swift; sourceTree = "<group>"; };
+		61E1FAC81C72486300EEC642 /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
+		61E1FAC91C72486300EEC642 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		61E1FACA1C72486300EEC642 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiBaoLiaoSubmitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +128,7 @@
 				611EF6411C6E7E3600469639 /* CommonViewControllers */,
 				611EF63C1C6E715200469639 /* SignInUpViewControllers */,
 				61E3FF5D1C6ED7AB00EAAD4D /* TouGaoViewControllers */,
+				61E1FAC51C7244EB00EEC642 /* Editor */,
 				61113E671C698B7A0051538D /* Main.storyboard */,
 				61113E6D1C698B7A0051538D /* Assets.xcassets */,
 				61113E6F1C698B7A0051538D /* LaunchScreen.storyboard */,
@@ -164,6 +173,17 @@
 				611EF63F1C6E7E2000469639 /* UNAlertView.swift */,
 			);
 			name = CommonViewControllers;
+			sourceTree = "<group>";
+		};
+		61E1FAC51C7244EB00EEC642 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				61E1FAC61C7245D500EEC642 /* BlogEditor.swift */,
+				61E1FAC81C72486300EEC642 /* colorPalette.plist */,
+				61E1FAC91C72486300EEC642 /* ColorPickerViewController.swift */,
+				61E1FACA1C72486300EEC642 /* Notice.swift */,
+			);
+			name = Editor;
 			sourceTree = "<group>";
 		};
 		61E3FF5D1C6ED7AB00EAAD4D /* TouGaoViewControllers */ = {
@@ -282,6 +302,7 @@
 			files = (
 				61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */,
 				61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */,
+				61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */,
 				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,8 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */,
 				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
+				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
@@ -317,6 +340,7 @@
 				61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */,
 				618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */,
 				61113E641C698B7A0051538D /* AppDelegate.swift in Sources */,
+				61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */,
 				61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

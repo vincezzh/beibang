@@ -16,7 +16,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var titleTextView: UITextView!
-    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentTextView: BlogEditor!
     @IBOutlet weak var contentLinkTextView: UITextView!
     @IBOutlet weak var previewButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
@@ -47,6 +47,8 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate {
         contentTextView.text = placeholder2
         contentTextView.textColor = UIColor.lightGrayColor()
         contentTextView.selectedTextRange = contentTextView.textRangeFromPosition(contentTextView.beginningOfDocument, toPosition: contentTextView.beginningOfDocument)
+        contentTextView.viewController = self
+        contentTextView.fullMode = false
         
         contentLinkTextView.delegate = self
         contentLinkTextView.text = placeholder3
