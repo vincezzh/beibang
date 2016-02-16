@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TouGaoEditorViewController: UIViewController, UITextViewDelegate {
+class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var bool: Bool = true
     var textViewY: CGFloat = 0.0
@@ -65,6 +65,11 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate {
         contentLinkTextView.selectedTextRange = contentLinkTextView.textRangeFromPosition(contentLinkTextView.beginningOfDocument, toPosition: contentLinkTextView.beginningOfDocument)
         contentLinkTextView.viewController = self
         contentLinkTextView.fullMode = false
+        
+        let tap = UITapGestureRecognizer(target: self, action: Selector("tapTitleImageView:"))
+        tap.delegate = self
+        titleImageView.userInteractionEnabled = true
+        titleImageView.addGestureRecognizer(tap)
     }
     
     deinit {
@@ -143,6 +148,50 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate {
                 textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
             }
         }
+    }
+    
+    func tapTitleImageView(sender: UITapGestureRecognizer) {
+        self.resignFirstResponder()
+        var sheet:UIActionSheet
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            sheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil,otherButtonTitles: "从相册选择", "拍照")
+        }else{
+            sheet = UIActionSheet(title:nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "从相册选择")
+        }
+        sheet.showInView(self.view)
+    }
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        var sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        if(buttonIndex != 0){
+            if(buttonIndex==1){                                     //相册
+                sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                self.resignFirstResponder()
+            }else{
+                sourceType = UIImagePickerControllerSourceType.Camera
+            }
+            let imagePickerController:UIImagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+//            imagePickerController.allowsEditing = true              //true为拍照、选择完进入图片编辑模式
+            imagePickerController.sourceType = sourceType
+            self.presentViewController(imagePickerController, animated: true, completion: {
+            })
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
+        var img  = info[UIImagePickerControllerOriginalImage] as! UIImage
+        img = self.scaleImage(img)
+        titleImageView.image = img
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func scaleImage(image:UIImage)->UIImage{
+        UIGraphicsBeginImageContext(CGSizeMake(titleImageView.bounds.size.width, image.size.height*(titleImageView.bounds.size.width/image.size.width)))
+        image.drawInRect(CGRectMake(0, 0, titleImageView.bounds.size.width, image.size.height*(titleImageView.bounds.size.width/image.size.width)))
+        let scaledimage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return scaledimage
     }
 
     @IBAction func clickPreviewButton(sender: AnyObject) {
