@@ -150,19 +150,19 @@ class ChaoZhiBaoLiaoSubmitViewController: UIViewController, UITextViewDelegate {
     
     func addImagesInImageView(images: [String]) {
         for index in 0...images.count-1 {
+            let session = NSURLSession.sharedSession()
             let imgURL: NSURL = NSURL(string: images[index])!
             let request: NSURLRequest = NSURLRequest(URL: imgURL)
-            NSURLConnection.sendAsynchronousRequest(
-                request, queue: NSOperationQueue.mainQueue(),
-                completionHandler: {(response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
-                    if error == nil {
-                        let imageView: UIImageView = UIImageView(image: UIImage(data: data!))
-                        imageView.contentMode = UIViewContentMode.ScaleAspectFit
-                        imageView.frame = CGRect(x: (index * 100), y: 0, width: 100, height: 100)
-                        self.contentImagesView.addSubview(imageView)
-                        self.contentImagesScrollView.contentSize = CGSizeMake(CGFloat(images.count * 100), 100)
-                    }
+            let imageTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+                if error == nil {
+                    let imageView: UIImageView = UIImageView(image: UIImage(data: data!))
+                    imageView.contentMode = UIViewContentMode.ScaleAspectFit
+                    imageView.frame = CGRect(x: (index * 100), y: 0, width: 100, height: 100)
+                    self.contentImagesView.addSubview(imageView)
+                    self.contentImagesScrollView.contentSize = CGSizeMake(CGFloat(images.count * 100), 100)
+                }
             })
+            imageTask.resume()
         }
     }
 

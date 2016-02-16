@@ -269,31 +269,44 @@ class BlogEditor: UITextView, UIImagePickerControllerDelegate, UIActionSheetDele
     
     func insertImage() {
         self.resignFirstResponder()
-        var sheet:UIActionSheet
-        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
-            sheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil,otherButtonTitles: "从相册选择", "拍照")
-        }else{
-            sheet = UIActionSheet(title:nil, delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil, otherButtonTitles: "从相册选择")
+        let actionSheetController: UIAlertController = UIAlertController()
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+            let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action: UIAlertAction) -> Void in
+            }
+            actionSheetController.addAction(cancelAction)
+            let choosePictureAction: UIAlertAction = UIAlertAction(title: "从相册选择", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                self.clickActionSheetButtons("PhotoLibrary")
+            }
+            actionSheetController.addAction(choosePictureAction)
+            let takePictureAction: UIAlertAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                self.clickActionSheetButtons("Camara")
+            }
+            actionSheetController.addAction(takePictureAction)
+        }else {
+            let cancelAction: UIAlertAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action: UIAlertAction) -> Void in
+            }
+            actionSheetController.addAction(cancelAction)
+            let choosePictureAction: UIAlertAction = UIAlertAction(title: "从相册选择", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                self.clickActionSheetButtons("PhotoLibrary")
+            }
+            actionSheetController.addAction(choosePictureAction)
         }
-        sheet.showInView(viewController.view)
+        viewController.presentViewController(actionSheetController, animated: true, completion: nil)
     }
     
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+    func clickActionSheetButtons(type: String) {
         var sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        if(buttonIndex != 0){
-            if(buttonIndex==1){                                     //相册
-                sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-                self.resignFirstResponder()
-            }else{
-                sourceType = UIImagePickerControllerSourceType.Camera
-            }
-            let imagePickerController:UIImagePickerController = UIImagePickerController()
-            imagePickerController.delegate = self
-            imagePickerController.allowsEditing = true              //true为拍照、选择完进入图片编辑模式
-            imagePickerController.sourceType = sourceType
-            viewController.presentViewController(imagePickerController, animated: true, completion: {
-            })
+        if(type == "PhotoLibrary") {
+            sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }else {
+            sourceType = UIImagePickerControllerSourceType.Camera
         }
+        let imagePickerController:UIImagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        imagePickerController.sourceType = sourceType
+        viewController.presentViewController(imagePickerController, animated: true, completion: {
+        })
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]){
