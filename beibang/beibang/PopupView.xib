@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouGaoEditorViewController" customModule="beibang" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopupView" customModule="beibang" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="318"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hey there, I'm PopupView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-q9-24r">
+                    <rect key="frame" x="39" y="149" width="199" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI4-bM-Dq6" userLabel="CLOSE-X">
+                    <rect key="frame" x="237" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="RaC-fJ-E7o"/>
+                        <constraint firstAttribute="width" constant="40" id="xqK-II-lpr"/>
+                    </constraints>
+                    <state key="normal" image="close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickCloseButtonInTipPopupView:" destination="-1" eventType="touchUpInside" id="IK7-dY-nZb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176469999998" green="0.078431372550000003" blue="0.35686274509999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DI4-bM-Dq6" secondAttribute="trailing" id="LKD-GA-ahw"/>
+                <constraint firstItem="DI4-bM-Dq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NCv-OY-0Xz"/>
+                <constraint firstAttribute="centerX" secondItem="5cJ-q9-24r" secondAttribute="centerX" id="U5U-cQ-bPR"/>
+                <constraint firstAttribute="centerY" secondItem="5cJ-q9-24r" secondAttribute="centerY" id="UIt-xl-mQV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="260.5" y="222"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="25" height="25"/>
+    </resources>
+</document>

@@ -18,6 +18,8 @@
 		61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E941C6990E30051538D /* SignInEntryViewController.swift */; };
 		611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */; };
 		611EF6401C6E7E2000469639 /* UNAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611EF63F1C6E7E2000469639 /* UNAlertView.swift */; };
+		617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617EFF8C1C741C8700C09174 /* PopupView.xib */; };
+		617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617EFF8D1C741C8700C09174 /* PopupView.swift */; };
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
@@ -64,6 +66,8 @@
 		61113E941C6990E30051538D /* SignInEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInEntryViewController.swift; sourceTree = "<group>"; };
 		611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiBaoLiaoViewController.swift; sourceTree = "<group>"; };
 		611EF63F1C6E7E2000469639 /* UNAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNAlertView.swift; sourceTree = "<group>"; };
+		617EFF8C1C741C8700C09174 /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		617EFF8D1C741C8700C09174 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,15 @@
 			name = CommonViewControllers;
 			sourceTree = "<group>";
 		};
+		617EFF901C741E8300C09174 /* TipPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				617EFF8C1C741C8700C09174 /* PopupView.xib */,
+				617EFF8D1C741C8700C09174 /* PopupView.swift */,
+			);
+			name = TipPopupView;
+			sourceTree = "<group>";
+		};
 		61E1FAC51C7244EB00EEC642 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 				611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */,
 				61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */,
 				61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */,
+				617EFF901C741E8300C09174 /* TipPopupView */,
 			);
 			name = TouGaoViewControllers;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 			files = (
 				61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */,
 				61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */,
+				617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */,
 				61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */,
 				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
 			);
@@ -331,6 +346,7 @@
 				61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */,
 				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
+				617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */,
 				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,

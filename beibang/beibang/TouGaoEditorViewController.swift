@@ -324,10 +324,85 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     }
 
     @IBAction func clickPreviewButton(sender: AnyObject) {
+        
     }
 
     @IBAction func clickSubmitButton(sender: AnyObject) {
+        showTipView()
     }
+    
+    @IBAction func clickCloseButtonInTipPopupView(sender: AnyObject) {
+        hidePopupView()
+    }
+
+    var popupView:PopupView?
+    var popupViewDic:[String: PopupView] = [:]
+    
+    var constX:NSLayoutConstraint?
+    var constY:NSLayoutConstraint?
+    
+    func showTipView() {
+        
+        //Load nib, and get reference to variable 'popupView'.
+        popupView = NSBundle.mainBundle().loadNibNamed("PopupView", owner: self, options: nil)[0] as? PopupView
+        self.view.addSubview(popupView!)
+        
+        //Configure popupview
+        popupView?.frame.size = CGSizeMake(0, 0)
+        popupView?.center = self.view.center
+        popupView?.alpha = 0.5
+        popupView?.clipsToBounds = false
+        
+        //Autolayout part
+        popupViewDic["popupView"] = popupView
+        
+        var dView:[String: UIView] = [:]
+        dView["popupView"] = popupView
+        
+        popupView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        let h_Pin = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(\(screenSize.width/4))-[popupView]-(\(screenSize.width/4))-|", options: [], metrics: nil, views: dView)
+        self.view.addConstraints(h_Pin)
+        
+        let v_Pin = NSLayoutConstraint.constraintsWithVisualFormat("V:|-(\(screenSize.height/4))-[popupView]-(\(screenSize.height/4))-|", options: [], metrics: nil, views: dView)
+        self.view.addConstraints(v_Pin)
+        
+        constY = NSLayoutConstraint(item: popupView!, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        self.view.addConstraint(constY!)
+        
+        constX = NSLayoutConstraint(item: popupView!, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        self.view.addConstraint(constX!)
+        
+        UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.50, options: UIViewAnimationOptions.LayoutSubviews, animations: { () -> Void in
+            self.popupView?.alpha = 1
+            self.view.layoutIfNeeded()
+            }) { (value:Bool) -> Void in
+                
+        }
+    }
+    
+    func hidePopupView() {
+        
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.50, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            
+            self.popupView!.alpha = 0
+            
+            }) { (value:Bool) -> Void in
+                self.popupView!.removeFromSuperview()
+                
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
