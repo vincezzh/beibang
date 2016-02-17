@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI4-bM-Dq6" userLabel="CLOSE-X">
-                    <rect key="frame" x="267" y="-10" width="20" height="20"/>
+                    <rect key="frame" x="257" y="0.0" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="RaC-fJ-E7o"/>
                         <constraint firstAttribute="width" constant="20" id="xqK-II-lpr"/>
@@ -27,11 +27,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="DI4-bM-Dq6" secondAttribute="trailing" constant="-10" id="LKD-GA-ahw"/>
-                <constraint firstItem="DI4-bM-Dq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-10" id="NCv-OY-0Xz"/>
+                <constraint firstAttribute="trailing" secondItem="DI4-bM-Dq6" secondAttribute="trailing" id="LKD-GA-ahw"/>
+                <constraint firstItem="DI4-bM-Dq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NCv-OY-0Xz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="DI4-bM-Dq6" id="DLS-QN-hhq"/>
+            </connections>
             <point key="canvasLocation" x="260.5" y="222"/>
         </view>
     </objects>

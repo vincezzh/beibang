@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     
     var bool: Bool = true
     var textViewY: CGFloat = 0.0
@@ -44,6 +44,10 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     @IBOutlet weak var itemLevelButton4: UIButton!
     @IBOutlet weak var itemLevelButton5: UIButton!
     @IBOutlet weak var itemLevelLabel: UILabel!
+    @IBOutlet weak var floatView: UIView!
+    @IBOutlet weak var floatViewTopLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var floatLeftButton: UIButton!
+    @IBOutlet weak var floatRightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +59,15 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     func initializeDecoration() {
         previewButton.layer.cornerRadius = 5
         submitButton.layer.cornerRadius = 5
+        
+        floatView.alpha = 0
+        floatView.backgroundColor = UIColor.clearColor()
+        
+        floatLeftButton.layer.cornerRadius = 0.5 * floatLeftButton.bounds.size.width
+        floatLeftButton.clipsToBounds = true
+        
+        floatRightButton.layer.cornerRadius = 0.5 * floatRightButton.bounds.size.width
+        floatRightButton.clipsToBounds = true
     }
     
     func initializeAction() {
@@ -63,6 +76,8 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        containerScrollView.delegate = self
         
         titleTextView.delegate = self
         titleTextView.text = placeholder1
@@ -181,6 +196,14 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         }
     }
     
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if let tv = currentTextView {
+            let textView = tv as! BlogEditor
+            floatView.alpha = 0
+            textView.hideKeyboard()
+        }
+    }
+    
     func clickTagButton(sender: UIButton!) {
         let attributeArray = tagButtonArray[sender.tag]
         let isActive = attributeArray[1] as! Bool
@@ -218,12 +241,25 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         
         UIView.animateWithDuration(animationDuration, delay: 0, options: .BeginFromCurrentState, animations: {
             if showsKeyboard {
-                if self.textViewY < originDelta {
+                if self.textViewY < originDelta/2 {
                     self.containerScrollView.contentOffset.y += originDelta
+                }else if self.textViewY < originDelta {
+                    self.containerScrollView.contentOffset.y += originDelta/2
+                }
+                
+                if self.currentTextView?.tag == 2 {
+                    self.floatView.alpha = 1
+                    self.floatViewTopLayoutConstraint.constant = self.screenSize.height + self.containerScrollView.contentOffset.y - originDelta - self.floatView.bounds.height - 70
                 }
             }else {
-                if self.textViewY < originDelta {
+                if self.textViewY < originDelta/2 {
                     self.containerScrollView.contentOffset.y -= originDelta
+                }else if self.textViewY < originDelta {
+                    self.containerScrollView.contentOffset.y -= originDelta/2
+                }
+                
+                if self.currentTextView?.tag == 2 {
+                    self.floatView.alpha = 0
                 }
             }
             }, completion: nil)
@@ -328,11 +364,22 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     }
 
     @IBAction func clickSubmitButton(sender: AnyObject) {
-        showTipView()
+        
     }
     
     @IBAction func clickCloseButtonInTipPopupView(sender: AnyObject) {
         hidePopupView()
+    }
+    
+    @IBAction func clickFloatViewLeftButton(sender: AnyObject) {
+        let textView = currentTextView as! BlogEditor
+        textView.hideKeyboard()
+        showTipView()
+    }
+    
+    @IBAction func clickFloatViewRightButton(sender: AnyObject) {
+        let textView = currentTextView as! BlogEditor
+        textView.insertImage()
     }
 
     var popupView:PopupView?
@@ -375,6 +422,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         
         UIView.animateWithDuration(1.0, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.50, options: UIViewAnimationOptions.LayoutSubviews, animations: { () -> Void in
             self.popupView?.alpha = 1
+            self.popupView?.backgroundColor = UIColor.clearColor()
             self.view.layoutIfNeeded()
             }) { (value:Bool) -> Void in
                 
