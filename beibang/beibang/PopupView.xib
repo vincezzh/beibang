@@ -11,17 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="277" height="318"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hey there, I'm PopupView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-q9-24r">
-                    <rect key="frame" x="39" y="149" width="199" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI4-bM-Dq6" userLabel="CLOSE-X">
-                    <rect key="frame" x="237" y="0.0" width="40" height="40"/>
+                    <rect key="frame" x="267" y="-10" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="RaC-fJ-E7o"/>
-                        <constraint firstAttribute="width" constant="40" id="xqK-II-lpr"/>
+                        <constraint firstAttribute="height" constant="20" id="RaC-fJ-E7o"/>
+                        <constraint firstAttribute="width" constant="20" id="xqK-II-lpr"/>
                     </constraints>
                     <state key="normal" image="close">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,12 +25,10 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.92941176469999998" green="0.078431372550000003" blue="0.35686274509999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="DI4-bM-Dq6" secondAttribute="trailing" id="LKD-GA-ahw"/>
-                <constraint firstItem="DI4-bM-Dq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NCv-OY-0Xz"/>
-                <constraint firstAttribute="centerX" secondItem="5cJ-q9-24r" secondAttribute="centerX" id="U5U-cQ-bPR"/>
-                <constraint firstAttribute="centerY" secondItem="5cJ-q9-24r" secondAttribute="centerY" id="UIt-xl-mQV"/>
+                <constraint firstAttribute="trailing" secondItem="DI4-bM-Dq6" secondAttribute="trailing" constant="-10" id="LKD-GA-ahw"/>
+                <constraint firstItem="DI4-bM-Dq6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-10" id="NCv-OY-0Xz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -44,6 +36,6 @@
         </view>
     </objects>
     <resources>
-        <image name="close" width="25" height="25"/>
+        <image name="close" width="50" height="50"/>
     </resources>
 </document>
