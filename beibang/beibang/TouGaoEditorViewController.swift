@@ -68,6 +68,24 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         
         floatRightButton.layer.cornerRadius = 0.5 * floatRightButton.bounds.size.width
         floatRightButton.clipsToBounds = true
+        
+        let image = UIImage(named: "placeholder")
+        let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton1.tintColor = UIColor.lightGrayColor()
+        itemLevelButton1.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton2.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton2.tintColor = UIColor.lightGrayColor()
+        itemLevelButton2.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton3.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton3.tintColor = UIColor.lightGrayColor()
+        itemLevelButton3.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton4.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton4.tintColor = UIColor.lightGrayColor()
+        itemLevelButton4.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton5.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton5.tintColor = UIColor.lightGrayColor()
+        itemLevelButton5.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     func initializeAction() {
@@ -91,6 +109,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         contentTextView.textColor = UIColor.lightGrayColor()
         contentTextView.selectedTextRange = contentTextView.textRangeFromPosition(contentTextView.beginningOfDocument, toPosition: contentTextView.beginningOfDocument)
         contentTextView.viewController = self
+        titleTextView.fullMode = true
         
         contentLinkTextView.delegate = self
         contentLinkTextView.text = placeholder3
@@ -104,25 +123,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         titleImageView.userInteractionEnabled = true
         titleImageView.addGestureRecognizer(tap)
         
-        let image = UIImage(named: "placeholder")
-        let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
-        itemLevelButton1.tintColor = UIColor.lightGrayColor()
-        itemLevelButton1.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        itemLevelButton2.setImage(tintedImage, forState: UIControlState.Normal)
-        itemLevelButton2.tintColor = UIColor.lightGrayColor()
-        itemLevelButton2.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        itemLevelButton3.setImage(tintedImage, forState: UIControlState.Normal)
-        itemLevelButton3.tintColor = UIColor.lightGrayColor()
-        itemLevelButton3.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        itemLevelButton4.setImage(tintedImage, forState: UIControlState.Normal)
-        itemLevelButton4.tintColor = UIColor.lightGrayColor()
-        itemLevelButton4.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        itemLevelButton5.setImage(tintedImage, forState: UIControlState.Normal)
-        itemLevelButton5.tintColor = UIColor.lightGrayColor()
-        itemLevelButton5.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         setItemLevel(5)
-        
         addTagsInTagScrollView()
     }
     
@@ -188,12 +189,12 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
             }else {
                 tagButton.tintColor = UIColor.lightGrayColor()
             }
-            tagButton.frame = CGRect(x: (index * 55), y: 0, width: 30, height: 50)
+            tagButton.frame = CGRectMake(CGFloat(index * 55), 0, 30, 50)
             tagButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
             tagButton.addTarget(self, action: "clickTagButton:", forControlEvents: UIControlEvents.TouchUpInside)
             tagScrollView.addSubview(tagButton)
-            tagScrollView.contentSize = CGSizeMake(CGFloat(tagButtonArray.count * 55), 60)
         }
+        tagScrollView.contentSize = CGSizeMake(CGFloat(tagButtonArray.count * 55), 60)
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {

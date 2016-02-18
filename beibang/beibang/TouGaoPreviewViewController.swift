@@ -9,6 +9,8 @@
 import UIKit
 
 class TouGaoPreviewViewController: UIViewController {
+    
+    var tagLabelArray = ["贝榜星妈", "宝宝用品", "极品推荐", "一二三四", "恭喜发财"]
 
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -27,11 +29,99 @@ class TouGaoPreviewViewController: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var tagLabelsScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        initializeDecoration()
+        initializeAction()
     }
+    
+    func initializeDecoration() {
+        avatarImageView.layer.cornerRadius = 0.5 * avatarImageView.bounds.size.width
+        avatarImageView.clipsToBounds = true
+        
+        followButton.layer.cornerRadius = 5
+        
+        addTagsInTagScrollView()
+        
+        let image = UIImage(named: "placeholder")
+        let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton1.tintColor = UIColor.lightGrayColor()
+        itemLevelButton1.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton2.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton2.tintColor = UIColor.lightGrayColor()
+        itemLevelButton2.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton3.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton3.tintColor = UIColor.lightGrayColor()
+        itemLevelButton3.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton4.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton4.tintColor = UIColor.lightGrayColor()
+        itemLevelButton4.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        itemLevelButton5.setImage(tintedImage, forState: UIControlState.Normal)
+        itemLevelButton5.tintColor = UIColor.lightGrayColor()
+        itemLevelButton5.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        buyLinkButton.layer.cornerRadius = 5
+        loveButton.layer.cornerRadius = 5
+        loveButton.clipsToBounds = true
+        bookmarkButton.layer.cornerRadius = 5
+        bookmarkButton.clipsToBounds = true
+        shareButton.layer.cornerRadius = 5
+        shareButton.clipsToBounds = true
+        goBackButton.layer.cornerRadius = 5
+        submitButton.layer.cornerRadius = 5
+    }
+    
+    func initializeAction() {
+        title = "预览"
+        
+        setItemLevel(5)
+    }
+    
+    func setItemLevel(level: Int) {
+        switch level {
+        case 5:
+            itemLevelButton5.tintColor = UIColor.orangeColor()
+            fallthrough
+        case 4:
+            itemLevelButton4.tintColor = UIColor.orangeColor()
+            fallthrough
+        case 3:
+            itemLevelButton3.tintColor = UIColor.orangeColor()
+            fallthrough
+        case 2:
+            itemLevelButton2.tintColor = UIColor.orangeColor()
+            fallthrough
+        case 1:
+            itemLevelButton1.tintColor = UIColor.orangeColor()
+        default:
+            print("Wrong level")
+        }
+    }
+    
+    func addTagsInTagScrollView() {
+        for index in 0...tagLabelArray.count-1 {
+            let tagLabel = UILabel()
+            tagLabel.text = tagLabelArray[index]
+            tagLabel.font = UIFont(name: tagLabel.font.fontName, size: 12)
+            tagLabel.frame = CGRectMake(CGFloat(index * 55), 0, 55, tagLabelsScrollView.bounds.height)
+            tagLabelsScrollView.addSubview(tagLabel)
+        }
+        tagLabelsScrollView.contentSize = CGSizeMake(CGFloat(tagLabelArray.count * 55), tagLabelsScrollView.bounds.height)
+    }
+    
+    @IBAction func clickGoBackButton(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
+    
+    
+    
+    
+    
 
 }
