@@ -347,7 +347,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="clickPreviewButton:" destination="3D0-eI-RVj" eventType="touchUpInside" id="JDq-Hk-d08"/>
-                                                    <segue destination="3eM-1G-G45" kind="show" id="nIa-sV-196"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1j-fa-Hk2">
@@ -518,6 +517,7 @@
                         <outlet property="tagScrollView" destination="Wb6-gL-Vbc" id="Suh-Sc-OBp"/>
                         <outlet property="titleImageView" destination="F9W-Ad-7U2" id="dKB-zV-7Z8"/>
                         <outlet property="titleTextView" destination="Z1P-FN-oOX" id="9VP-Ee-IHh"/>
+                        <segue destination="3eM-1G-G45" kind="show" identifier="previewTouGaoSegue" id="ix7-zA-WcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgW-o3-D7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

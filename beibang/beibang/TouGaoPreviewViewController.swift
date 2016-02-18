@@ -10,7 +10,7 @@ import UIKit
 
 class TouGaoPreviewViewController: UIViewController {
     
-    var tagLabelArray = ["贝榜星妈", "宝宝用品", "极品推荐", "一二三四", "恭喜发财"]
+    var touGao: TouGao!
 
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -36,6 +36,7 @@ class TouGaoPreviewViewController: UIViewController {
 
         initializeDecoration()
         initializeAction()
+        initializeData()
     }
     
     func initializeDecoration() {
@@ -43,8 +44,6 @@ class TouGaoPreviewViewController: UIViewController {
         avatarImageView.clipsToBounds = true
         
         followButton.layer.cornerRadius = 5
-        
-        addTagsInTagScrollView()
         
         let image = UIImage(named: "placeholder")
         let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
@@ -77,8 +76,14 @@ class TouGaoPreviewViewController: UIViewController {
     
     func initializeAction() {
         title = "预览"
-        
-        setItemLevel(5)
+    }
+    
+    func initializeData() {
+        titleImageView.image = touGao.titleImage
+        titleTextView.text = touGao.titleText
+        contentTextView.attributedText = touGao.contentText
+        setItemLevel(touGao.itemLevel)
+        addTagsInTagScrollView(touGao.tagLabelArray)
     }
     
     func setItemLevel(level: Int) {
@@ -102,15 +107,15 @@ class TouGaoPreviewViewController: UIViewController {
         }
     }
     
-    func addTagsInTagScrollView() {
-        for index in 0...tagLabelArray.count-1 {
+    func addTagsInTagScrollView(tags: [String]) {
+        for index in 0...tags.count-1 {
             let tagLabel = UILabel()
-            tagLabel.text = tagLabelArray[index]
+            tagLabel.text = tags[index]
             tagLabel.font = UIFont(name: tagLabel.font.fontName, size: 12)
             tagLabel.frame = CGRectMake(CGFloat(index * 55), 0, 55, tagLabelsScrollView.bounds.height)
             tagLabelsScrollView.addSubview(tagLabel)
         }
-        tagLabelsScrollView.contentSize = CGSizeMake(CGFloat(tagLabelArray.count * 55), tagLabelsScrollView.bounds.height)
+        tagLabelsScrollView.contentSize = CGSizeMake(CGFloat(tags.count * 55), tagLabelsScrollView.bounds.height)
     }
     
     @IBAction func clickGoBackButton(sender: AnyObject) {

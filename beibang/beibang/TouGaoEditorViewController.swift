@@ -14,19 +14,20 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     var textViewY: CGFloat = 0.0
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     var currentTextView: UITextView?
+    var currentItemLevel: Int = 0
     let placeholder1 = "足够有趣的标题能吸引更多的爸爸妈妈们！当然，一句充满创意的标题，必须包含详细的品牌，产品名以及型号。"
     let placeholder2 = "给宝宝买到了什么好东西？还是作为辣妈奶爸的你给自己拔了颗草？请把你的购物心情和好产品的心得体验分享到这里，通过图文并茂的方式把好产品晒出来吧！同时请对产品外观细节、做工、功能以及使用体验或是购买心得（如：转运规则、尺码信息等）给大家介绍介绍。高品质产品、高人气新品、新奇特好物不仅能得到更多额外奖励，还会让更多宝妈奶爸成为你的粉丝哦！Tips：内文请勿少于5张图片，精美的细节图能大大增加分享的可读性，也就大大增加了众测中奖的机会:)"
     let placeholder3 = "真实的购买链接能够帮助爸爸妈妈们无困难剁手，还有可能让你的分享变成精华帖置顶哦！方式1：使用浏览器可直接拷贝黏贴商品详情页地址，使用APP购买的可以在商品详情页面上点击—复制，然后回到这里粘贴即可；方式2：将订单详情页面截图（iOS：home+电源；Android：电源+音量上），点击左下方照相机图标上传；"
     var tagButtonArray = [
-        ["placeholder", true, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"],
-        ["placeholder", false, "label"]
+        ["placeholder", true, "恭喜发财"],
+        ["placeholder", false, "五福临门"],
+        ["placeholder", false, "苦逼大众"],
+        ["placeholder", false, "美若天仙"],
+        ["placeholder", false, "欠我点钱"],
+        ["placeholder", false, "明天很冷"],
+        ["placeholder", false, "真的是吗"],
+        ["placeholder", false, "赤膊跳跳"],
+        ["placeholder", false, "短裤掉了"]
     ]
 
     @IBOutlet weak var titleImageView: UIImageView!
@@ -155,6 +156,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         itemLevelButton4.tintColor = UIColor.lightGrayColor()
         itemLevelButton5.tintColor = UIColor.lightGrayColor()
         itemLevelLabel.text = levelLabels[level - 1]
+        currentItemLevel = level
         switch level {
             case 5:
                 itemLevelButton5.tintColor = UIColor.orangeColor()
@@ -349,6 +351,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         var img  = info[UIImagePickerControllerOriginalImage] as! UIImage
         img = self.scaleImage(img)
         titleImageView.image = img
+        titleImageView.tag = 1
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -361,7 +364,28 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     }
 
     @IBAction func clickPreviewButton(sender: AnyObject) {
+        var errorMessage = ""
+        if titleImageView.tag == 0 {
+            errorMessage = "背景图像忘记上传啦"
+        }
+        if titleTextView.text == placeholder1 {
+            if errorMessage != "" {
+                errorMessage += "\n"
+            }
+            errorMessage += "请输入稿件标题"
+        }
+        if contentTextView.text == placeholder2 {
+            if errorMessage != "" {
+                errorMessage += "\n"
+            }
+            errorMessage += "请输入稿件内容"
+        }
         
+        if errorMessage == "" {
+            performSegueWithIdentifier("previewTouGaoSegue", sender: nil)
+        }else {
+            showErrorAlert("提示", message: errorMessage)
+        }
     }
 
     @IBAction func clickSubmitButton(sender: AnyObject) {
@@ -443,9 +467,39 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "previewTouGaoSegue") {
+            let viewController = segue.destinationViewController as! TouGaoPreviewViewController
+            let touGao = TouGao()
+            touGao.titleImage = titleImageView.image
+            touGao.titleText = titleTextView.text
+            touGao.contentText = contentTextView.attributedText
+            touGao.itemLevel = currentItemLevel
+            var tagLabelArray: [String] = []
+            for index in 0...tagButtonArray.count-1 {
+                let attributeArray = tagButtonArray[index]
+                let isActive = attributeArray[1] as! Bool
+                if isActive {
+                    tagLabelArray.append(attributeArray[2] as! String)
+                }
+            }
+            touGao.tagLabelArray = tagLabelArray
+            
+            viewController.touGao = touGao
+        }
+    }
     
-    
-    
+    func showErrorAlert(title: String, message: String) {
+        let alertView = UNAlertView(title: title, message: message)
+        alertView.messageAlignment = NSTextAlignment.Center
+        alertView.buttonAlignment  = UNButtonAlignment.Horizontal
+        alertView.addButton("关闭",
+            backgroundColor: UIColor(red: 219 / 255.0, green: 82 / 255.0, blue: 75 / 255.0, alpha: 1.0),
+            fontColor: UIColor.whiteColor(),
+            action: {}
+        )
+        alertView.show()
+    }
     
     
     
