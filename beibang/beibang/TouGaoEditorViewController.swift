@@ -408,7 +408,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         
         popupView?.translatesAutoresizingMaskIntoConstraints = false
         
-        let h_Pin = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(\(screenSize.width/4))-[popupView]-(\(screenSize.width/4))-|", options: [], metrics: nil, views: dView)
+        let h_Pin = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(\(screenSize.width/8))-[popupView]-(\(screenSize.width/8))-|", options: [], metrics: nil, views: dView)
         self.view.addConstraints(h_Pin)
         
         let v_Pin = NSLayoutConstraint.constraintsWithVisualFormat("V:|-(\(screenSize.height/4))-[popupView]-(\(screenSize.height/4))-|", options: [], metrics: nil, views: dView)

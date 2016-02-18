@@ -21,8 +21,8 @@ class PopupView: UIView, UIScrollViewDelegate {
     override func drawRect(rect: CGRect) {
         closeButton.layer.zPosition = 100
         
-        let wBounds = screenSize.width/2
-        let hBounds = screenSize.height/2
+        let wBounds = (screenSize.width * 6)/8
+        let hBounds = screenSize.height / 2
         
         scrollView = UIScrollView()
         scrollView.backgroundColor = UIColor.clearColor()
