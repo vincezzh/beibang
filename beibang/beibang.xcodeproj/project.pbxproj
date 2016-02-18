@@ -29,6 +29,7 @@
 		61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC91C72486300EEC642 /* ColorPickerViewController.swift */; };
 		61E1FACD1C72486300EEC642 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FACA1C72486300EEC642 /* Notice.swift */; };
 		61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */; };
+		61E693371C75666F0064416F /* TouGaoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E693361C75666F0064416F /* TouGaoPreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		61E1FAC91C72486300EEC642 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		61E1FACA1C72486300EEC642 /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiBaoLiaoSubmitViewController.swift; sourceTree = "<group>"; };
+		61E693361C75666F0064416F /* TouGaoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */,
 				61E3FF5B1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift */,
 				61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */,
+				61E693361C75666F0064416F /* TouGaoPreviewViewController.swift */,
 				617EFF901C741E8300C09174 /* TipPopupView */,
 			);
 			name = TouGaoViewControllers;
@@ -347,6 +350,7 @@
 				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
 				617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */,
+				61E693371C75666F0064416F /* TouGaoPreviewViewController.swift in Sources */,
 				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
