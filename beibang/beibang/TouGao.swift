@@ -12,6 +12,7 @@ class TouGao {
     var type: String!
     var tagLabelArray: [String] = []
     var titleImage: UIImage!
+    var titleImageUrl: String!
     var titleText: String!
     var itemLevel: Int!
     var contentText: NSAttributedString!
