@@ -8,18 +8,53 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
+    @IBOutlet weak var toolbar: UIToolbar!
 
+    var popoverVC: TouGaoPopupButtonsViewController = TouGaoPopupButtonsViewController()
+    var touGaoType = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        // Return no adaptive presentation style, use default presentation behaviour
+        return .None
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func clickTouGaoBarButton(sender: AnyObject) {
+        popoverVC = storyboard?.instantiateViewControllerWithIdentifier("touGaoButtonsPopover") as! TouGaoPopupButtonsViewController
+        popoverVC.modalPresentationStyle = .Popover
+        popoverVC.preferredContentSize = CGSizeMake(80, 160)
+        if let popoverController = popoverVC.popoverPresentationController {
+            popoverController.sourceView = toolbar
+            popoverController.sourceRect = toolbar.bounds
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection.Any
+            popoverController.delegate = self
+            popoverVC.delegate = self
+        }
+        presentViewController(popoverVC, animated: true, completion: nil)
     }
-
+    
+    func setTouGaoTypeAndPerformSegue(type: String) {
+        popoverVC.dismissViewControllerAnimated(true, completion: nil)
+        
+        touGaoType = type
+        if type == "超值爆料" {
+            performSegueWithIdentifier("chaoZhiBaoLiaoSegue", sender: nil)
+        }else {
+            performSegueWithIdentifier("touGaoSegue", sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "touGaoSegue" {
+            let viewController = segue.destinationViewController as! TouGaoEditorViewController
+            viewController.touGaoType = touGaoType
+        }
+    }
 
 }
 

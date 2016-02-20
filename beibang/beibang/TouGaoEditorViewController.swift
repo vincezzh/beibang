@@ -29,6 +29,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         ["placeholder", false, "赤膊跳跳"],
         ["placeholder", false, "短裤掉了"]
     ]
+    var touGaoType = ""
 
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var titleTextView: BlogEditor!
@@ -90,7 +91,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     }
     
     func initializeAction() {
-        title = "投稿"
+        title = touGaoType
         
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
@@ -475,6 +476,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
             touGao.titleText = titleTextView.text
             touGao.contentText = contentTextView.attributedText
             touGao.itemLevel = currentItemLevel
+            touGao.type = touGaoType
             var tagLabelArray: [String] = []
             for index in 0...tagButtonArray.count-1 {
                 let attributeArray = tagButtonArray[index]
