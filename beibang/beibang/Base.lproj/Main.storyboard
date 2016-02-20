@@ -18,18 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPK-qc-GZ5">
-                                <rect key="frame" x="20" y="92" width="560" height="440"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="tPi-Uw-G4c"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tPi-Uw-G4c"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czB-DQ-Mye">
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <constraints>
@@ -47,16 +35,94 @@
                                     <barButtonItem title="我的" id="eWk-72-AAh"/>
                                 </items>
                             </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-jh-TZM">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topCell" rowHeight="192" id="GWD-lE-IlA">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="192"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GWD-lE-IlA" id="RFd-Ns-Q3p">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="191"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ore-41-sgY">
+                                                    <rect key="frame" x="8" y="8" width="584" height="175"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" editable="NO" text="第一次妈咪的海淘经历，第一次妈咪的海淘经历，第一次妈咪的海淘经历，" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xfq-tf-rsn">
+                                                    <rect key="frame" x="8" y="123" width="584" height="60"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="SGO-HM-K74"/>
+                                                    </constraints>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xfq-tf-rsn" firstAttribute="leading" secondItem="RFd-Ns-Q3p" secondAttribute="leading" constant="8" id="1at-vn-tSX"/>
+                                                <constraint firstAttribute="trailing" secondItem="xfq-tf-rsn" secondAttribute="trailing" constant="8" id="8PR-1S-uNl"/>
+                                                <constraint firstAttribute="bottom" secondItem="xfq-tf-rsn" secondAttribute="bottom" constant="8" id="FV9-hV-M8l"/>
+                                                <constraint firstAttribute="trailing" secondItem="ore-41-sgY" secondAttribute="trailing" constant="8" id="JIo-N9-ikn"/>
+                                                <constraint firstItem="ore-41-sgY" firstAttribute="leading" secondItem="RFd-Ns-Q3p" secondAttribute="leading" constant="8" id="QI9-4j-BTO"/>
+                                                <constraint firstAttribute="bottom" secondItem="ore-41-sgY" secondAttribute="bottom" constant="8" id="iBL-Xz-XfO"/>
+                                                <constraint firstItem="ore-41-sgY" firstAttribute="top" secondItem="RFd-Ns-Q3p" secondAttribute="top" constant="8" id="kDA-cc-FNT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="followingCell" rowHeight="64" id="3yz-uk-hPc">
+                                        <rect key="frame" x="0.0" y="220" width="600" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3yz-uk-hPc" id="feE-MA-vX8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kWb-ZW-sVS">
+                                                    <rect key="frame" x="532" y="2" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="U39-et-L0l"/>
+                                                        <constraint firstAttribute="height" constant="60" id="rBi-JY-Mwy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="第一次妈咪的海淘经历，第一次妈咪的海淘经历，第一次妈咪的海淘经历，" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a0g-Ge-Shz">
+                                                    <rect key="frame" x="8" y="2" width="499" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="sl8-nS-PA0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="a0g-Ge-Shz" firstAttribute="centerY" secondItem="feE-MA-vX8" secondAttribute="centerY" id="B2Z-Ra-DCr"/>
+                                                <constraint firstAttribute="trailing" secondItem="kWb-ZW-sVS" secondAttribute="trailing" constant="8" id="JVF-sY-wRF"/>
+                                                <constraint firstItem="a0g-Ge-Shz" firstAttribute="leading" secondItem="feE-MA-vX8" secondAttribute="leading" constant="8" id="SUg-Ke-Gf0"/>
+                                                <constraint firstAttribute="bottom" secondItem="kWb-ZW-sVS" secondAttribute="bottom" constant="2" id="aCP-wt-etn"/>
+                                                <constraint firstItem="kWb-ZW-sVS" firstAttribute="leading" secondItem="a0g-Ge-Shz" secondAttribute="trailing" constant="25" id="dRy-7r-G9R"/>
+                                                <constraint firstItem="kWb-ZW-sVS" firstAttribute="top" secondItem="feE-MA-vX8" secondAttribute="top" constant="2" id="hVT-Mv-kvC"/>
+                                                <constraint firstItem="kWb-ZW-sVS" firstAttribute="centerY" secondItem="feE-MA-vX8" secondAttribute="centerY" id="k6D-sR-DR6"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="aCP-wt-etn"/>
+                                                    <exclude reference="hVT-Mv-kvC"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="czB-DQ-Mye" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="78u-eO-g8a"/>
-                            <constraint firstItem="NPK-qc-GZ5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ADU-J8-dTq"/>
+                            <constraint firstItem="hCj-jh-TZM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7eR-du-XlB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="czB-DQ-Mye" secondAttribute="bottom" id="LlK-SL-Eiv"/>
-                            <constraint firstItem="NPK-qc-GZ5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="QLq-QJ-S62"/>
-                            <constraint firstAttribute="trailing" secondItem="NPK-qc-GZ5" secondAttribute="trailing" constant="20" id="S9P-vt-VE9"/>
+                            <constraint firstAttribute="trailing" secondItem="hCj-jh-TZM" secondAttribute="trailing" id="RY4-mX-Nzw"/>
+                            <constraint firstItem="hCj-jh-TZM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rzk-mo-RY0"/>
                             <constraint firstAttribute="trailing" secondItem="czB-DQ-Mye" secondAttribute="trailing" id="SM2-fn-cTs"/>
-                            <constraint firstItem="czB-DQ-Mye" firstAttribute="top" secondItem="NPK-qc-GZ5" secondAttribute="bottom" constant="18" id="uwT-I1-SmX"/>
+                            <constraint firstItem="czB-DQ-Mye" firstAttribute="top" secondItem="hCj-jh-TZM" secondAttribute="bottom" id="smT-Cn-1Yk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="贝榜" id="XyN-cX-TJ9">
