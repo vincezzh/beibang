@@ -53,6 +53,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     func initializeDecoration() {
         touGaoTableView.layer.cornerRadius = 5
+        touGaoTableView.tableFooterView = UIView(frame: CGRectZero)
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
