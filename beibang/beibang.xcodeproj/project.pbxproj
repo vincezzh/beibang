@@ -26,6 +26,7 @@
 		612C4B891C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */; };
 		612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */; };
 		612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */; };
+		616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */; };
 		617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617EFF8C1C741C8700C09174 /* PopupView.xib */; };
 		617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617EFF8D1C741C8700C09174 /* PopupView.swift */; };
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
@@ -89,6 +90,7 @@
 		612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuViewController.swift; sourceTree = "<group>"; };
 		612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhangHuAnQuanViewController.swift; sourceTree = "<group>"; };
 		612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LianXiPingTaiViewController.swift; sourceTree = "<group>"; };
+		616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeShouCangTableViewCell.swift; sourceTree = "<group>"; };
 		617EFF8C1C741C8700C09174 /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		617EFF8D1C741C8700C09174 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				612C4B841C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift */,
 				61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */,
 				612C4B861C7ACD79004A3D2B /* WoDeShouCangViewController.swift */,
+				616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */,
 				612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */,
 				612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */,
 				612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */,
@@ -442,6 +445,7 @@
 				61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */,
 				612C4B851C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift in Sources */,
 				61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */,
+				616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
