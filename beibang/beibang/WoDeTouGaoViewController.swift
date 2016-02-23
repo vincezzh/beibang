@@ -38,6 +38,7 @@ class WoDeTouGaoViewController: UIViewController {
         touGaoTableView.delegate = self
         touGaoTableView.dataSource = self
         touGaoTableView.tableFooterView = UIView(frame: CGRectZero)
+        touGaoTableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
 }
@@ -48,14 +49,13 @@ extension WoDeTouGaoViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return 130
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! WoDeTouGaoTableViewCell
         let touGao = touGaos[indexPath.row]
-//        cell.titleTextView.font = UIFont(name: cell.titleTextView.font!.fontName, size: 15)
-        cell.titleTextView.text = touGao.titleText
+        cell.titleLabel.text = touGao.titleText
         cell.postDateLabel.text = touGao.postDateString
         cell.statusLabel.text = "已发布"
         cell.statusImageView.image = UIImage(named: "placeholder")
@@ -64,8 +64,19 @@ extension WoDeTouGaoViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            touGaos.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "删除"
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        touGaoTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        performSegueWithIdentifier(myListOptions[indexPath.row][2], sender: nil)
     }
 }

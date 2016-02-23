@@ -111,18 +111,19 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("topCell") as! MainViewTopCell
-            cell.titleTextView.text = touGaos[indexPath.row].titleText
+            cell.titleLabel.text = touGaos[indexPath.row].titleText
             ImageUtil.loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
             return cell
         }else {
             let cell = tableView.dequeueReusableCellWithIdentifier("followingCell") as! MainViewFollowingCell
-            cell.titleTextView.text = touGaos[indexPath.row].titleText
+            cell.titleLabel.text = touGaos[indexPath.row].titleText
             ImageUtil.loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
             return cell
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         print(indexPath.row)
     }
     

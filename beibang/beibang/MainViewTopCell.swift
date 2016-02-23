@@ -11,7 +11,7 @@ import UIKit
 class MainViewTopCell: UITableViewCell {
     
     @IBOutlet weak var titleImageView: UIImageView!
-    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

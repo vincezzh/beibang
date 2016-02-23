@@ -10,7 +10,7 @@ import UIKit
 
 class WoDeTouGaoTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusImageView: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var titleImageView: UIImageView!
@@ -18,7 +18,9 @@ class WoDeTouGaoTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        statusImageView.layer.cornerRadius = 0.5 * statusImageView.bounds.size.width
+        statusImageView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
