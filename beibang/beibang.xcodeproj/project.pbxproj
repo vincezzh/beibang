@@ -34,6 +34,8 @@
 		61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B156771C78079B0020B29D /* TouGaoPopupButtonsViewController.swift */; };
 		61B1567A1C7823550020B29D /* MainViewTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B156791C7823550020B29D /* MainViewTopCell.swift */; };
 		61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */; };
+		61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */; };
+		61B258531C7BB67E006AE29A /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B258521C7BB67E006AE29A /* ImageUtil.swift */; };
 		61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */; };
 		61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC61C7245D500EEC642 /* BlogEditor.swift */; };
 		61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E1FAC81C72486300EEC642 /* colorPalette.plist */; };
@@ -95,6 +97,8 @@
 		61B156771C78079B0020B29D /* TouGaoPopupButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoPopupButtonsViewController.swift; sourceTree = "<group>"; };
 		61B156791C7823550020B29D /* MainViewTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTopCell.swift; sourceTree = "<group>"; };
 		61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewFollowingCell.swift; sourceTree = "<group>"; };
+		61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeTouGaoTableViewCell.swift; sourceTree = "<group>"; };
+		61B258521C7BB67E006AE29A /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoEditorViewController.swift; sourceTree = "<group>"; };
 		61E1FAC61C7245D500EEC642 /* BlogEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEditor.swift; sourceTree = "<group>"; };
 		61E1FAC81C72486300EEC642 /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				611EF63F1C6E7E2000469639 /* UNAlertView.swift */,
 				61E1FAC51C7244EB00EEC642 /* Editor */,
+				61B258521C7BB67E006AE29A /* ImageUtil.swift */,
 			);
 			name = CommonComponents;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				612C4B801C7AB519004A3D2B /* MyProfileTableViewCell.swift */,
 				612C4B821C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift */,
 				612C4B841C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift */,
+				61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */,
 				612C4B861C7ACD79004A3D2B /* WoDeShouCangViewController.swift */,
 				612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */,
 				612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */,
@@ -415,10 +421,12 @@
 				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
+				61B258531C7BB67E006AE29A /* ImageUtil.swift in Sources */,
 				61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */,
 				612C4B811C7AB519004A3D2B /* MyProfileTableViewCell.swift in Sources */,
 				612C4B7E1C7AB071004A3D2B /* MyProfileViewController.swift in Sources */,
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
+				61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
 				612C4B831C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift in Sources */,
 				61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */,

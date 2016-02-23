@@ -16,4 +16,5 @@ class TouGao {
     var titleText: String!
     var itemLevel: Int!
     var contentText: NSAttributedString!
+    var postDateString: String!
 }

@@ -112,12 +112,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("topCell") as! MainViewTopCell
             cell.titleTextView.text = touGaos[indexPath.row].titleText
-            loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
+            ImageUtil.loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
             return cell
         }else {
             let cell = tableView.dequeueReusableCellWithIdentifier("followingCell") as! MainViewFollowingCell
             cell.titleTextView.text = touGaos[indexPath.row].titleText
-            loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
+            ImageUtil.loadImage(touGaos[indexPath.row].titleImageUrl, imageView: cell.titleImageView)
             return cell
         }
     }
@@ -136,17 +136,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         return "删除"
     }
-    
-    func loadImage(url: String, imageView: UIImageView) {
-        let session = NSURLSession.sharedSession()
-        let imgURL: NSURL = NSURL(string: url)!
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
-        let imageTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            if error == nil {
-                imageView.image = UIImage(data: data!)
-            }
-        })
-        imageTask.resume()
-    }
+
 }
 
