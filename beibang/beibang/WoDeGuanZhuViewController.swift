@@ -22,18 +22,18 @@ class WoDeGuanZhuViewController: UIViewController {
         let user1 = User()
         user1.avatarUrl = "http://www.akhaltech.com/img/profile.png"
         user1.name = "发现了什么好价"
-        user1.followerNumber = "219"
+        user1.followerNumber = "💜219"
         users.append(user1)
         
         let user2 = User()
         user2.avatarUrl = "http://www.akhaltech.com/img/profile.png"
         user2.name = "发现了什么好价"
-        user2.followerNumber = "219"
+        user2.followerNumber = "💜219"
         users.append(user2)
     }
     
     func initializeDecoration() {
-        title = "我的投稿"
+        title = "我的关注"
         
         guanZhuTableView.delegate = self
         guanZhuTableView.dataSource = self
@@ -55,7 +55,7 @@ extension WoDeGuanZhuViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! WoDeGuanZhuTableViewCell
         let user = users[indexPath.row]
         cell.nameLabel.text = user.name
-        cell.followedLabel.text = user.followerNumber
+        cell.followerNumberLabel.text = user.followerNumber
         ImageUtil.loadImage(user.avatarUrl, imageView: cell.avatarImageView)
         
         return cell

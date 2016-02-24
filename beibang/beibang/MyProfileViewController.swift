@@ -11,12 +11,12 @@ import UIKit
 class MyProfileViewController: UIViewController {
     
     let myListOptions = [
-        ["我的宝宝", "placeholder", "woDeBaoBaoSegue"],
-        ["我的投稿", "placeholder", "woDeTouGaoSegue"],
-        ["我的收藏", "placeholder", "woDeShouCangSegue"],
-        ["我的关注", "placeholder", "woDeGuanZhuSegue"],
-        ["账户安全", "placeholder", "zhangHuAnQuanSegue"],
-        ["联系平台", "placeholder", "lianXiPingTaiSegue"]
+        ["我的宝宝", "book-icon", "woDeBaoBaoSegue"],
+        ["我的投稿", "sucker-icon", "woDeTouGaoSegue"],
+        ["我的收藏", "simple-star-icon", "woDeShouCangSegue"],
+        ["我的关注", "focus-icon", "woDeGuanZhuSegue"],
+        ["账户安全", "key-icon", "zhangHuAnQuanSegue"],
+        ["联系平台", "people-icon", "lianXiPingTaiSegue"]
     ]
     
     @IBOutlet weak var avatarImageView: UIImageView!
