@@ -156,7 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="贝榜" id="XyN-cX-TJ9">
                         <barButtonItem key="backBarButtonItem" title="返回" id="Tfi-aE-rcE"/>
-                        <barButtonItem key="rightBarButtonItem" title="资料" id="dK7-Lk-89H">
+                        <barButtonItem key="rightBarButtonItem" image="username-barbutton" id="dK7-Lk-89H">
                             <connections>
                                 <segue destination="QPy-36-7qU" kind="show" id="evW-jE-XQH"/>
                             </connections>
@@ -823,7 +823,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftN-Y0-PLk">
                                                 <rect key="frame" x="20" y="699" width="560" height="60"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wb6-gL-Vbc">
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb6-gL-Vbc">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
                                                     </scrollView>
                                                 </subviews>
@@ -874,7 +874,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="4cc-By-dqV"/>
                                                             <constraint firstAttribute="width" constant="30" id="lI8-cx-4Ld"/>
                                                         </constraints>
-                                                        <state key="normal" image="placeholder"/>
+                                                        <state key="normal" image="star-icon"/>
                                                         <connections>
                                                             <action selector="clickItemLevelButton1:" destination="3D0-eI-RVj" eventType="touchUpInside" id="fSW-Me-G0h"/>
                                                         </connections>
@@ -885,7 +885,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="UTa-Q5-HWr"/>
                                                             <constraint firstAttribute="width" constant="30" id="z0X-zP-y7M"/>
                                                         </constraints>
-                                                        <state key="normal" image="placeholder"/>
+                                                        <state key="normal" image="star-icon"/>
                                                         <connections>
                                                             <action selector="clickItemLevelButton2:" destination="3D0-eI-RVj" eventType="touchUpInside" id="z6Q-As-wpe"/>
                                                         </connections>
@@ -896,7 +896,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="S0a-FS-adR"/>
                                                             <constraint firstAttribute="width" constant="30" id="kq8-cB-QrL"/>
                                                         </constraints>
-                                                        <state key="normal" image="placeholder"/>
+                                                        <state key="normal" image="star-icon"/>
                                                         <connections>
                                                             <action selector="clickItemLevelButton3:" destination="3D0-eI-RVj" eventType="touchUpInside" id="E0F-tb-buL"/>
                                                         </connections>
@@ -907,7 +907,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="SwM-Lm-SHi"/>
                                                             <constraint firstAttribute="height" constant="30" id="c5t-Cv-r9M"/>
                                                         </constraints>
-                                                        <state key="normal" image="placeholder"/>
+                                                        <state key="normal" image="star-icon"/>
                                                         <connections>
                                                             <action selector="clickItemLevelButton4:" destination="3D0-eI-RVj" eventType="touchUpInside" id="VJL-AD-lYJ"/>
                                                         </connections>
@@ -918,7 +918,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="AhU-7R-l1W"/>
                                                             <constraint firstAttribute="height" constant="30" id="FYR-RG-9a7"/>
                                                         </constraints>
-                                                        <state key="normal" image="placeholder"/>
+                                                        <state key="normal" image="star-icon"/>
                                                         <connections>
                                                             <action selector="clickItemLevelButton5:" destination="3D0-eI-RVj" eventType="touchUpInside" id="WWu-6c-ygC"/>
                                                         </connections>
@@ -1255,7 +1255,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="i2d-gY-O7Z">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag-icon" translatesAutoresizingMaskIntoConstraints="NO" id="i2d-gY-O7Z">
                                                 <rect key="frame" x="120" y="329" width="22" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="1CM-89-JfO"/>
@@ -1283,7 +1283,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="KeC-h5-Sqy"/>
                                                     <constraint firstAttribute="height" constant="25" id="Ule-pk-Xg4"/>
                                                 </constraints>
-                                                <state key="normal" image="placeholder"/>
+                                                <state key="normal" image="star-icon"/>
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiF-Rw-1fW">
                                                 <rect key="frame" x="153" y="369" width="25" height="25"/>
@@ -1291,7 +1291,7 @@
                                                     <constraint firstAttribute="height" constant="25" id="32f-TB-5TQ"/>
                                                     <constraint firstAttribute="width" constant="25" id="AKW-NH-U69"/>
                                                 </constraints>
-                                                <state key="normal" image="placeholder"/>
+                                                <state key="normal" image="star-icon"/>
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-NR-p3I">
                                                 <rect key="frame" x="186" y="369" width="25" height="25"/>
@@ -1299,7 +1299,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="gvw-bp-Gvf"/>
                                                     <constraint firstAttribute="height" constant="25" id="zbr-Ij-hMm"/>
                                                 </constraints>
-                                                <state key="normal" image="placeholder"/>
+                                                <state key="normal" image="star-icon"/>
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiU-j9-SFv">
                                                 <rect key="frame" x="219" y="369" width="25" height="25"/>
@@ -1307,7 +1307,7 @@
                                                     <constraint firstAttribute="height" constant="25" id="CUP-Tc-hyc"/>
                                                     <constraint firstAttribute="width" constant="25" id="iVf-Yj-z7I"/>
                                                 </constraints>
-                                                <state key="normal" image="placeholder"/>
+                                                <state key="normal" image="star-icon"/>
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCu-C5-LQ5">
                                                 <rect key="frame" x="252" y="369" width="25" height="25"/>
@@ -1315,7 +1315,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="94J-l9-ILZ"/>
                                                     <constraint firstAttribute="height" constant="25" id="dfl-nd-1Wm"/>
                                                 </constraints>
-                                                <state key="normal" image="placeholder"/>
+                                                <state key="normal" image="star-icon"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybu-dO-no7">
                                                 <rect key="frame" x="542" y="419" width="38" height="38"/>
@@ -1983,7 +1983,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="SmV-0C-ksn"/>
                                                             <constraint firstAttribute="height" constant="100" id="bpV-Fw-mBX"/>
                                                         </constraints>
-                                                        <state key="normal" image="avatar"/>
+                                                        <state key="normal" image="signin-avatar"/>
                                                         <connections>
                                                             <action selector="goToSignInPage:" destination="CYQ-54-2Wh" eventType="touchUpInside" id="I2X-ZD-3mq"/>
                                                             <segue destination="K3Y-aA-F0T" kind="show" identifier="goToSignInPage" id="oQx-wV-Z8Z"/>
@@ -2021,7 +2021,7 @@
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-EL-Ow7">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bag" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-EL-Ow7">
                                                                 <rect key="frame" x="237" y="71" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="Isg-le-2Bb"/>
@@ -2109,7 +2109,7 @@
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-7K-NbI">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-7K-NbI">
                                                                 <rect key="frame" x="237" y="71" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="64R-cI-uGS"/>
@@ -2213,7 +2213,7 @@
                                                                     </mask>
                                                                 </variation>
                                                             </label>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Kdj-NK-yk9">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seefar" translatesAutoresizingMaskIntoConstraints="NO" id="Kdj-NK-yk9">
                                                                 <rect key="frame" x="237" y="71" width="50" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="LCe-3B-ohc"/>
@@ -2653,7 +2653,7 @@
                                     <constraint firstAttribute="height" constant="120" id="U97-mh-uH3"/>
                                     <constraint firstAttribute="width" constant="120" id="b5z-yi-PKD"/>
                                 </constraints>
-                                <state key="normal" image="placeholder"/>
+                                <state key="normal" image="take-avatar"/>
                                 <connections>
                                     <action selector="selectAvatar:" destination="jqZ-sJ-qdR" eventType="touchUpInside" id="WSl-Gr-lW6"/>
                                 </connections>
@@ -2664,7 +2664,7 @@
                                     <constraint firstAttribute="width" constant="80" id="PlP-Fa-r5t"/>
                                     <constraint firstAttribute="height" constant="80" id="pok-eA-HtJ"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="placeholder"/>
+                                <state key="normal" title="Button" image="sucker-purple"/>
                                 <connections>
                                     <action selector="clickWillBeMomButton:" destination="jqZ-sJ-qdR" eventType="touchUpInside" id="Ums-Bi-1e1"/>
                                 </connections>
@@ -2675,7 +2675,7 @@
                                     <constraint firstAttribute="width" constant="80" id="J4z-Tm-0Eg"/>
                                     <constraint firstAttribute="height" constant="80" id="iZb-iU-oD2"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="placeholder"/>
+                                <state key="normal" title="Button" image="sucker-purple"/>
                                 <connections>
                                     <action selector="clickHasBeenMomButton:" destination="jqZ-sJ-qdR" eventType="touchUpInside" id="pdd-jg-jt2"/>
                                 </connections>
@@ -2686,7 +2686,7 @@
                                     <constraint firstAttribute="width" constant="80" id="KFK-3D-pKl"/>
                                     <constraint firstAttribute="height" constant="80" id="j6g-dv-Ei2"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="placeholder"/>
+                                <state key="normal" title="Button" image="sucker-purple"/>
                                 <connections>
                                     <action selector="clickWillBePregnantButton:" destination="jqZ-sJ-qdR" eventType="touchUpInside" id="EdA-vD-I9M"/>
                                 </connections>
@@ -4717,7 +4717,16 @@
     </scenes>
     <resources>
         <image name="avatar" width="120" height="120"/>
+        <image name="bag" width="314" height="275"/>
+        <image name="gift" width="312" height="272"/>
         <image name="palette" width="268" height="430"/>
         <image name="placeholder" width="250" height="250"/>
+        <image name="seefar" width="342" height="265"/>
+        <image name="signin-avatar" width="573" height="573"/>
+        <image name="star-icon" width="374" height="359"/>
+        <image name="sucker-purple" width="388" height="389"/>
+        <image name="tag-icon" width="411" height="409"/>
+        <image name="take-avatar" width="611" height="611"/>
+        <image name="username-barbutton" width="30" height="29"/>
     </resources>
 </document>

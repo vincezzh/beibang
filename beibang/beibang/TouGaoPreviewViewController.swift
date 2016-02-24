@@ -45,7 +45,7 @@ class TouGaoPreviewViewController: UIViewController {
         
         followButton.layer.cornerRadius = 5
         
-        let image = UIImage(named: "placeholder")
+        let image = UIImage(named: "star-icon")
         let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
         itemLevelButton1.tintColor = UIColor.lightGrayColor()

@@ -28,7 +28,7 @@ class RegisterStepOneViewController: UIViewController {
         
         cellphoneTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftCellphoneImageView = UIImageView()
-        leftCellphoneImageView.image = UIImage(named: "avatar")
+        leftCellphoneImageView.image = UIImage(named: "cellphone-icon")
         let leftCellphoneView = UIView()
         leftCellphoneView.addSubview(leftCellphoneImageView)
         leftCellphoneView.frame = CGRectMake(0, 0, 35, 25)
@@ -38,7 +38,7 @@ class RegisterStepOneViewController: UIViewController {
         
         validationCodeTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftValidationCodeImageView = UIImageView()
-        leftValidationCodeImageView.image = UIImage(named: "avatar")
+        leftValidationCodeImageView.image = UIImage(named: "validation-icon")
         let leftValidationCodeView = UIView()
         leftValidationCodeView.addSubview(leftValidationCodeImageView)
         leftValidationCodeView.frame = CGRectMake(0, 0, 35, 25)
@@ -48,7 +48,7 @@ class RegisterStepOneViewController: UIViewController {
         
         usernameTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftUsernameImageView = UIImageView()
-        leftUsernameImageView.image = UIImage(named: "avatar")
+        leftUsernameImageView.image = UIImage(named: "username-icon")
         let leftUsernameView = UIView()
         leftUsernameView.addSubview(leftUsernameImageView)
         leftUsernameView.frame = CGRectMake(0, 0, 35, 25)
@@ -58,7 +58,7 @@ class RegisterStepOneViewController: UIViewController {
         
         passwordTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftPasswordImageView = UIImageView()
-        leftPasswordImageView.image = UIImage(named: "avatar")
+        leftPasswordImageView.image = UIImage(named: "password-icon")
         let leftPasswordView = UIView()
         leftPasswordView.addSubview(leftPasswordImageView)
         leftPasswordView.frame = CGRectMake(0, 0, 35, 25)

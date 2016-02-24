@@ -26,7 +26,7 @@ class SignInViewController: UIViewController {
         
         usernameTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftUsernameImageView = UIImageView()
-        leftUsernameImageView.image = UIImage(named: "avatar")
+        leftUsernameImageView.image = UIImage(named: "username-icon")
         let leftUsernameView = UIView()
         leftUsernameView.addSubview(leftUsernameImageView)
         leftUsernameView.frame = CGRectMake(0, 0, 35, 25)
@@ -36,7 +36,7 @@ class SignInViewController: UIViewController {
         
         passwordTextField.borderStyle = UITextBorderStyle.RoundedRect
         let leftPasswordImageView = UIImageView()
-        leftPasswordImageView.image = UIImage(named: "avatar")
+        leftPasswordImageView.image = UIImage(named: "password-icon")
         let leftPasswordView = UIView()
         leftPasswordView.addSubview(leftPasswordImageView)
         leftPasswordView.frame = CGRectMake(0, 0, 35, 25)

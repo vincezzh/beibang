@@ -19,15 +19,15 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
     let placeholder2 = "给宝宝买到了什么好东西？还是作为辣妈奶爸的你给自己拔了颗草？请把你的购物心情和好产品的心得体验分享到这里，通过图文并茂的方式把好产品晒出来吧！同时请对产品外观细节、做工、功能以及使用体验或是购买心得（如：转运规则、尺码信息等）给大家介绍介绍。高品质产品、高人气新品、新奇特好物不仅能得到更多额外奖励，还会让更多宝妈奶爸成为你的粉丝哦！Tips：内文请勿少于5张图片，精美的细节图能大大增加分享的可读性，也就大大增加了众测中奖的机会:)"
     let placeholder3 = "真实的购买链接能够帮助爸爸妈妈们无困难剁手，还有可能让你的分享变成精华帖置顶哦！方式1：使用浏览器可直接拷贝黏贴商品详情页地址，使用APP购买的可以在商品详情页面上点击—复制，然后回到这里粘贴即可；方式2：将订单详情页面截图（iOS：home+电源；Android：电源+音量上），点击左下方照相机图标上传；"
     var tagButtonArray = [
-        ["placeholder", true, "恭喜发财"],
-        ["placeholder", false, "五福临门"],
-        ["placeholder", false, "苦逼大众"],
-        ["placeholder", false, "美若天仙"],
-        ["placeholder", false, "欠我点钱"],
-        ["placeholder", false, "明天很冷"],
-        ["placeholder", false, "真的是吗"],
-        ["placeholder", false, "赤膊跳跳"],
-        ["placeholder", false, "短裤掉了"]
+        ["trip-icon", true, "恭喜发财"],
+        ["city-icon", false, "五福临门"],
+        ["eat-icon", false, "苦逼大众"],
+        ["stuff-icon", false, "美若天仙"],
+        ["pant-icon", false, "欠我点钱"],
+        ["pant-icon", false, "明天很冷"],
+        ["pant-icon", false, "真的是吗"],
+        ["pant-icon", false, "赤膊跳跳"],
+        ["pant-icon", false, "短裤掉了"]
     ]
     var touGaoType = ""
 
@@ -71,7 +71,7 @@ class TouGaoEditorViewController: UIViewController, UITextViewDelegate, UIGestur
         floatRightButton.layer.cornerRadius = 0.5 * floatRightButton.bounds.size.width
         floatRightButton.clipsToBounds = true
         
-        let image = UIImage(named: "placeholder")
+        let image = UIImage(named: "star-icon")
         let tintedImage = image?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         itemLevelButton1.setImage(tintedImage, forState: UIControlState.Normal)
         itemLevelButton1.tintColor = UIColor.lightGrayColor()
