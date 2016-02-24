@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		610456411C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610456401C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift */; };
 		61113E641C698B7A0051538D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E631C698B7A0051538D /* AppDelegate.swift */; };
 		61113E661C698B7A0051538D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E651C698B7A0051538D /* MainViewController.swift */; };
 		61113E691C698B7A0051538D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61113E671C698B7A0051538D /* Main.storyboard */; };
@@ -28,7 +29,7 @@
 		612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */; };
 		616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */; };
 		616E0C6A1C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C691C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift */; };
-		616E0C6C1C7C0FE500A171C6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C6B1C7C0FE500A171C6 /* File.swift */; };
+		616E0C6C1C7C0FE500A171C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C6B1C7C0FE500A171C6 /* User.swift */; };
 		617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617EFF8C1C741C8700C09174 /* PopupView.xib */; };
 		617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617EFF8D1C741C8700C09174 /* PopupView.swift */; };
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		610456401C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuDetailViewController.swift; sourceTree = "<group>"; };
 		61113E601C698B7A0051538D /* beibang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beibang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61113E631C698B7A0051538D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61113E651C698B7A0051538D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 		612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LianXiPingTaiViewController.swift; sourceTree = "<group>"; };
 		616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeShouCangTableViewCell.swift; sourceTree = "<group>"; };
 		616E0C691C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuTableViewCell.swift; sourceTree = "<group>"; };
-		616E0C6B1C7C0FE500A171C6 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		616E0C6B1C7C0FE500A171C6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		617EFF8C1C741C8700C09174 /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		617EFF8D1C741C8700C09174 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				612C4B861C7ACD79004A3D2B /* WoDeShouCangViewController.swift */,
 				616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */,
 				612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */,
+				610456401C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift */,
 				616E0C691C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift */,
 				612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */,
 				612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */,
@@ -283,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				61F1A5351C763BF600CAA9E1 /* TouGao.swift */,
-				616E0C6B1C7C0FE500A171C6 /* File.swift */,
+				616E0C6B1C7C0FE500A171C6 /* User.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
 				612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */,
 				617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */,
+				610456411C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift in Sources */,
 				61E693371C75666F0064416F /* TouGaoPreviewViewController.swift in Sources */,
 				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
@@ -452,7 +456,7 @@
 				61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */,
 				612C4B851C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift in Sources */,
 				61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */,
-				616E0C6C1C7C0FE500A171C6 /* File.swift in Sources */,
+				616E0C6C1C7C0FE500A171C6 /* User.swift in Sources */,
 				616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

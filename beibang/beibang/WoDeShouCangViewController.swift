@@ -22,16 +22,20 @@ class WoDeShouCangViewController: UIViewController {
         let tougao = TouGao()
         tougao.titleImageUrl = "http://www.akhaltech.com/img/profile.png"
         tougao.titleText = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！"
-        tougao.authorName = "熊爸爸"
-        tougao.authorImageUrl = "http://www.bmw.ca/content/dam/bmw/common/all-models/3-series/sedan/2015/at-a-glance/3-series-m-sport-package-04.jpg/jcr:content/renditions/cq5dam.resized.img.485.low.time1447942782786.jpg"
+        let author = User()
+        author.name = "熊爸爸"
+        author.avatarUrl = "http://www.bmw.ca/content/dam/bmw/common/all-models/3-series/sedan/2015/at-a-glance/3-series-m-sport-package-04.jpg/jcr:content/renditions/cq5dam.resized.img.485.low.time1447942782786.jpg"
+        tougao.author = author
         tougao.likeNumber = "💜200"
         touGaos.append(tougao)
         
         let tougao1 = TouGao()
         tougao1.titleImageUrl = "http://www.akhaltech.com/img/profile.png"
         tougao1.titleText = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！"
-        tougao1.authorName = "潮妈小辣椒"
-        tougao1.authorImageUrl = "http://cdn.bmwblog.com/wp-content/uploads/BMW-10-750x500.jpg"
+        let author1 = User()
+        author1.name = "潮妈小辣椒"
+        author1.avatarUrl = "http://cdn.bmwblog.com/wp-content/uploads/BMW-10-750x500.jpg"
+        tougao1.author = author
         tougao1.likeNumber = "💜87"
         touGaos.append(tougao1)
     }
@@ -60,10 +64,10 @@ extension WoDeShouCangViewController: UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! WoDeShouCangTableViewCell
         let touGao = touGaos[indexPath.row]
         cell.titleLabel.text = touGao.titleText
-        cell.authorNameLabel.text = touGao.authorName
+        cell.authorNameLabel.text = touGao.author.name
         cell.likeNumberLabel.text = touGao.likeNumber
         ImageUtil.loadImage(touGao.titleImageUrl, imageView: cell.titleImageView)
-        ImageUtil.loadImage(touGao.authorImageUrl, imageView: cell.authorAvatarImageView)
+        ImageUtil.loadImage(touGao.author.avatarUrl, imageView: cell.authorAvatarImageView)
         
         return cell
     }

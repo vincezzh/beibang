@@ -74,7 +74,7 @@ extension WoDeGuanZhuViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        //        performSegueWithIdentifier(myListOptions[indexPath.row][2], sender: nil)
+        performSegueWithIdentifier("showUserDetailSegue", sender: nil)
     }
 
 }

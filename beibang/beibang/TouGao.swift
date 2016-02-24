@@ -17,7 +17,6 @@ class TouGao {
     var itemLevel: Int!
     var contentText: NSAttributedString!
     var postDateString: String!
-    var authorImageUrl: String!
-    var authorName: String!
     var likeNumber: String!
+    var author: User!
 }

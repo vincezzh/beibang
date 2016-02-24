@@ -12,4 +12,5 @@ class User {
     var name: String!
     var avatarUrl: String!
     var followerNumber: String!
+    var touGaos:[TouGao] = []
 }
