@@ -34,8 +34,6 @@ class WoDeBaoBaoViewController: UIViewController {
     @IBOutlet weak var babySexSegment: UISegmentedControl!
     @IBOutlet weak var setBabyMainPageButton: UIButton!
     @IBOutlet weak var hasBeenMomViewBottomConstraint: NSLayoutConstraint!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
