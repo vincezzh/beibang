@@ -11,7 +11,7 @@ import UIKit
 class MyProfileViewController: UIViewController {
     
     let myListOptions = [
-        ["我的宝宝", "book-icon", "woDeBaoBaoWillBeMomSegue"],
+        ["我的宝宝", "book-icon", "woDeBaoBaoHasBeenMomSegue"],
         ["我的投稿", "sucker-icon", "woDeTouGaoSegue"],
         ["我的收藏", "simple-star-icon", "woDeShouCangSegue"],
         ["我的关注", "focus-icon", "woDeGuanZhuSegue"],

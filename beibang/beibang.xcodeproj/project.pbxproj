@@ -33,6 +33,7 @@
 		617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617EFF8C1C741C8700C09174 /* PopupView.xib */; };
 		617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617EFF8D1C741C8700C09174 /* PopupView.swift */; };
 		61816CC11C7E96A500B98C1A /* WoDeBaoBaoPregnentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61816CC01C7E96A500B98C1A /* WoDeBaoBaoPregnentViewController.swift */; };
+		61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61816CC21C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift */; };
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
@@ -101,6 +102,7 @@
 		617EFF8C1C741C8700C09174 /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		617EFF8D1C741C8700C09174 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		61816CC01C7E96A500B98C1A /* WoDeBaoBaoPregnentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeBaoBaoPregnentViewController.swift; sourceTree = "<group>"; };
+		61816CC21C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeBaoBaoMomViewController.swift; sourceTree = "<group>"; };
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				612C4B801C7AB519004A3D2B /* MyProfileTableViewCell.swift */,
 				612C4B821C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift */,
 				61816CC01C7E96A500B98C1A /* WoDeBaoBaoPregnentViewController.swift */,
+				61816CC21C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift */,
 				612C4B841C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift */,
 				61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */,
 				612C4B861C7ACD79004A3D2B /* WoDeShouCangViewController.swift */,
@@ -444,6 +447,7 @@
 				616E0C6A1C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift in Sources */,
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
 				61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */,
+				61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
 				612C4B831C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift in Sources */,
 				61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */,

@@ -1,27 +1,37 @@
 //
-//  WoDeBaoBaoViewController.swift
+//  WoDeBaoBaoMomViewController.swift
 //  beibang
 //
-//  Created by Zhehan Zhang on 2016-02-22.
+//  Created by Zhehan Zhang on 2016-02-24.
 //  Copyright © 2016 Akhaltech. All rights reserved.
 //
 
 import UIKit
 
-class WoDeBaoBaoViewController: UIViewController {
-    
+class WoDeBaoBaoMomViewController: UIViewController {
+
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var currentStatusLabel: UILabel!
+    @IBOutlet weak var oneBabyView: UIView!
+    @IBOutlet weak var oneBabyAgeLabel: UILabel!
+    @IBOutlet weak var oneBabyNameLabel: UILabel!
+    @IBOutlet weak var twoBabiesView: UIView!
+    @IBOutlet weak var twoBabiesFirstNameLabel: UILabel!
+    @IBOutlet weak var twoBabiesFirstAgeLabel: UILabel!
+    @IBOutlet weak var twoBabiesSecondNameLabel: UILabel!
+    @IBOutlet weak var twoBabiesSecondAgeLabel: UILabel!
     
+    @IBOutlet weak var setBabyMainPageInStatusViewButton: UIButton!
     @IBOutlet weak var updateStatusView: UIView!
     @IBOutlet weak var updateStatusButton: UIButton!
-    @IBOutlet weak var beingPregnentButton: UIButton!
-    @IBOutlet weak var beingPregnentLabel: UILabel!
-    @IBOutlet weak var hasBeenMomButton: UIButton!
-    @IBOutlet weak var hasBeenMomLabel: UILabel!
+    @IBOutlet weak var updateFirstBabyButton: UIButton!
+    @IBOutlet weak var updateFirstBabyLabel: UILabel!
+    @IBOutlet weak var beingPregnentSecondButton: UIButton!
+    @IBOutlet weak var beingPregnentSecondLabel: UILabel!
+    @IBOutlet weak var hasBeenMomSecondButton: UIButton!
+    @IBOutlet weak var hasBeenMomSecondLabel: UILabel!
     @IBOutlet weak var updateStatusViewBottomConstraint: NSLayoutConstraint!
-
+    
     @IBOutlet weak var beMomDateView: UIView!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var beMomDateTextField: UITextField!
@@ -34,10 +44,10 @@ class WoDeBaoBaoViewController: UIViewController {
     @IBOutlet weak var babySexSegment: UISegmentedControl!
     @IBOutlet weak var setBabyMainPageButton: UIButton!
     @IBOutlet weak var hasBeenMomViewBottomConstraint: NSLayoutConstraint!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initializeDecoration()
     }
     
@@ -46,16 +56,22 @@ class WoDeBaoBaoViewController: UIViewController {
         
         avatarImageView.layer.cornerRadius = 0.5 * avatarImageView.bounds.size.width
         avatarImageView.clipsToBounds = true
+        oneBabyView.alpha = 0
         
+        setBabyMainPageInStatusViewButton.layer.cornerRadius = 5
         updateStatusButton.layer.cornerRadius = 5
-        beingPregnentButton.layer.cornerRadius = 0.5 * beingPregnentButton.bounds.size.width
-        beingPregnentButton.clipsToBounds = true
-        beingPregnentButton.alpha = 0
-        beingPregnentLabel.alpha = 0
-        hasBeenMomButton.layer.cornerRadius = 0.5 * hasBeenMomButton.bounds.size.width
-        hasBeenMomButton.clipsToBounds = true
-        hasBeenMomButton.alpha = 0
-        hasBeenMomLabel.alpha = 0
+        updateFirstBabyButton.layer.cornerRadius = 0.5 * updateFirstBabyButton.bounds.size.width
+        updateFirstBabyButton.clipsToBounds = true
+        updateFirstBabyButton.alpha = 0
+        updateFirstBabyLabel.alpha = 0
+        beingPregnentSecondButton.layer.cornerRadius = 0.5 * beingPregnentSecondButton.bounds.size.width
+        beingPregnentSecondButton.clipsToBounds = true
+        beingPregnentSecondButton.alpha = 0
+        beingPregnentSecondLabel.alpha = 0
+        hasBeenMomSecondButton.layer.cornerRadius = 0.5 * hasBeenMomSecondButton.bounds.size.width
+        hasBeenMomSecondButton.clipsToBounds = true
+        hasBeenMomSecondButton.alpha = 0
+        hasBeenMomSecondLabel.alpha = 0
         
         confirmButton.layer.cornerRadius = 5
         beMomDateTextField.layer.cornerRadius = 5
@@ -69,44 +85,47 @@ class WoDeBaoBaoViewController: UIViewController {
     
     @IBAction func clickUpdateStatusButton(sender: AnyObject) {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.beingPregnentButton.alpha = 1
-            self.beingPregnentLabel.alpha = 1
-            self.hasBeenMomButton.alpha = 1
-            self.hasBeenMomLabel.alpha = 1
+            self.updateFirstBabyButton.alpha = 1
+            self.updateFirstBabyLabel.alpha = 1
+            self.beingPregnentSecondButton.alpha = 1
+            self.beingPregnentSecondLabel.alpha = 1
+            self.hasBeenMomSecondButton.alpha = 1
+            self.hasBeenMomSecondLabel.alpha = 1
+            self.setBabyMainPageInStatusViewButton.alpha = 0
             self.updateStatusButton.alpha = 0
-        }, completion: nil)
+            }, completion: nil)
     }
     
-    @IBAction func clickBeingPregnentButton(sender: AnyObject) {
+    @IBAction func clickBeingPregnentSecondButton(sender: AnyObject) {
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                self.updateStatusViewBottomConstraint.constant = -220
-                self.view.layoutIfNeeded()
+            self.updateStatusViewBottomConstraint.constant = -220
+            self.view.layoutIfNeeded()
             }) { (finished: Bool) -> Void in
                 UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                     self.beMomDateViewBottomConstraint.constant = 31
                     self.view.layoutIfNeeded()
-                }, completion: nil)
+                    }, completion: nil)
         }
     }
     
-    @IBAction func clickHasBeenMomButton(sender: AnyObject) {
+    @IBAction func clickUpdateFirstBabyButton(sender: AnyObject) {
+        displayBabyDetailWindow()
+    }
+    
+    @IBAction func clickHasBeenMomSecondButton(sender: AnyObject) {
+        displayBabyDetailWindow()
+    }
+
+    func displayBabyDetailWindow() {
         UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                self.updateStatusViewBottomConstraint.constant = -220
-                self.view.layoutIfNeeded()
+            self.updateStatusViewBottomConstraint.constant = -220
+            self.view.layoutIfNeeded()
             }) { (finished: Bool) -> Void in
                 UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                     self.hasBeenMomViewBottomConstraint.constant = 31
                     self.view.layoutIfNeeded()
-                }, completion: nil)
+                    }, completion: nil)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
 
 }
