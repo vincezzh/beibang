@@ -10,6 +10,9 @@ import UIKit
 
 class ShareMainViewController: UIViewController {
     
+    var zuiXinView: ZuiXinView?
+    var zhuanTiView: ZhuanTiView?
+    
     var fuliViewArray = [
         ["placeholder", "123位妈妈推荐"],
         ["placeholder", "76位妈妈推荐"],
@@ -20,6 +23,7 @@ class ShareMainViewController: UIViewController {
         ["placeholder", "133位妈妈推荐"]
     ]
     
+    @IBOutlet weak var topScrollView: UIScrollView!
     @IBOutlet weak var upperScrollViewTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var topBackgroundImageView: UIImageView!
@@ -30,8 +34,6 @@ class ShareMainViewController: UIViewController {
     @IBOutlet weak var userFollowerNumberLabel: UILabel!
     @IBOutlet weak var letterButton: UIButton!
     @IBOutlet weak var messageButton: UIButton!
-    
-    @IBOutlet weak var fuLiHuiScrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,21 +50,66 @@ class ShareMainViewController: UIViewController {
     }
     
     func initializeAction() {
-        addFuLiViewsInFuLiScrollView()
+        addZuiXinView()
     }
     
-    func addFuLiViewsInFuLiScrollView() {
-        for index in 0...fuliViewArray.count-1 {
-            let attributeArray = fuliViewArray[index]
-            let fuliView: ShareFuLiView = ShareFuLiView.instanceFromNib()
-            fuliView.fuliImageButton.setImage(UIImage(named: attributeArray[0]), forState: UIControlState.Normal)
-            fuliView.fuliImageButton.layer.cornerRadius = 5
-            fuliView.fuliImageButton.clipsToBounds = true
-            fuliView.fuliRecommondationNumberLabel.text = attributeArray[1]
-            fuliView.frame = CGRectMake(CGFloat(index * 108), 0, 108, 128)
-            fuLiHuiScrollView.addSubview(fuliView)
+    func removeAllViews() {
+        if zuiXinView != nil {
+            zuiXinView?.alpha = 0
         }
-        fuLiHuiScrollView.contentSize = CGSizeMake(CGFloat(fuliViewArray.count * 108 + 8), 128)
+        if zhuanTiView != nil {
+            zhuanTiView?.alpha = 0
+        }
+    }
+    
+    func addZuiXinView() {
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.removeAllViews()
+        }) { (finished: Bool) -> Void in
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                if self.zuiXinView == nil {
+                    self.zuiXinView = ZuiXinView.instanceFromNib()
+                    self.zuiXinView!.fuliViewArray = self.fuliViewArray
+                    self.view.addSubview(self.zuiXinView!)
+                    
+                    var dView:[String: UIView] = [:]
+                    dView["topScrollView"] = self.topScrollView
+                    dView["zuiXinView"] = self.zuiXinView
+                    self.zuiXinView!.translatesAutoresizingMaskIntoConstraints = false
+                    let h_Pin = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[zuiXinView]-(0)-|", options: [], metrics: nil, views: dView)
+                    self.view.addConstraints(h_Pin)
+                    let v_Pin = NSLayoutConstraint.constraintsWithVisualFormat("V:[topScrollView]-(0)-[zuiXinView]-(0)-|", options: [], metrics: nil, views: dView)
+                    self.view.addConstraints(v_Pin)
+                }else {
+                    self.zuiXinView?.alpha = 1
+                }
+            }, completion: nil)
+        }
+    }
+    
+    func addZhuanTiView() {
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.removeAllViews()
+        }) { (finished: Bool) -> Void in
+            UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                if self.zhuanTiView == nil {
+                    self.zhuanTiView = ZhuanTiView.instanceFromNib()
+                    self.zhuanTiView!.numberOfView = 8
+                    self.view.addSubview(self.zhuanTiView!)
+                    
+                    var dView:[String: UIView] = [:]
+                    dView["topScrollView"] = self.topScrollView
+                    dView["zhuanTiView"] = self.zhuanTiView
+                    self.zhuanTiView!.translatesAutoresizingMaskIntoConstraints = false
+                    let h_Pin = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[zhuanTiView]-(0)-|", options: [], metrics: nil, views: dView)
+                    self.view.addConstraints(h_Pin)
+                    let v_Pin = NSLayoutConstraint.constraintsWithVisualFormat("V:[topScrollView]-(0)-[zhuanTiView]-(0)-|", options: [], metrics: nil, views: dView)
+                    self.view.addConstraints(v_Pin)
+                }else {
+                    self.zhuanTiView?.alpha = 1
+                }
+            }, completion: nil)
+        }
     }
 
     func moveUp() {
@@ -81,12 +128,19 @@ class ShareMainViewController: UIViewController {
     
     @IBAction func clickZuiXinButton(sender: AnyObject) {
         moveDown()
+        addZuiXinView()
     }
     
     @IBAction func clickZhuanTiButton(sender: AnyObject) {
         moveUp()
+        addZhuanTiView()
     }
     
+    @IBAction func clickAvatarButton(sender: AnyObject) {
+        moveUp()
+        addZuiXinView()
+    }
+
     
     
     

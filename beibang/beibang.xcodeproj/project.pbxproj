@@ -40,6 +40,10 @@
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
+		619B97E41C7FEF0200C87E26 /* ZuiXinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */; };
+		619B97E61C7FEF2000C87E26 /* ZuiXinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */; };
+		619B97E81C7FFFCF00C87E26 /* ZhuanTiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */; };
+		619B97EA1C7FFFDF00C87E26 /* ZhuanTiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619B97E91C7FFFDF00C87E26 /* ZhuanTiView.xib */; };
 		61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B156771C78079B0020B29D /* TouGaoPopupButtonsViewController.swift */; };
 		61B1567A1C7823550020B29D /* MainViewTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B156791C7823550020B29D /* MainViewTopCell.swift */; };
 		61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */; };
@@ -112,6 +116,10 @@
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
+		619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZuiXinView.swift; sourceTree = "<group>"; };
+		619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZuiXinView.xib; sourceTree = "<group>"; };
+		619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuanTiView.swift; sourceTree = "<group>"; };
+		619B97E91C7FFFDF00C87E26 /* ZhuanTiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhuanTiView.xib; sourceTree = "<group>"; };
 		61B156771C78079B0020B29D /* TouGaoPopupButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoPopupButtonsViewController.swift; sourceTree = "<group>"; };
 		61B156791C7823550020B29D /* MainViewTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewTopCell.swift; sourceTree = "<group>"; };
 		61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewFollowingCell.swift; sourceTree = "<group>"; };
@@ -267,6 +275,10 @@
 				6182F4061C7F52C100F44AC0 /* ShareMainViewController.swift */,
 				6182F4081C7F879400F44AC0 /* ShareFuLiView.swift */,
 				6182F40A1C7F8BC700F44AC0 /* ShareFuLiView.xib */,
+				619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */,
+				619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */,
+				619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */,
+				619B97E91C7FFFDF00C87E26 /* ZhuanTiView.xib */,
 			);
 			name = ShareComponent;
 			sourceTree = "<group>";
@@ -421,8 +433,10 @@
 				61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */,
 				61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */,
 				617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */,
+				619B97E61C7FEF2000C87E26 /* ZuiXinView.xib in Resources */,
 				61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */,
 				6182F40B1C7F8BC700F44AC0 /* ShareFuLiView.xib in Resources */,
+				619B97EA1C7FFFDF00C87E26 /* ZhuanTiView.xib in Resources */,
 				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,9 +476,11 @@
 				6182F4071C7F52C100F44AC0 /* ShareMainViewController.swift in Sources */,
 				61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */,
 				612C4B811C7AB519004A3D2B /* MyProfileTableViewCell.swift in Sources */,
+				619B97E41C7FEF0200C87E26 /* ZuiXinView.swift in Sources */,
 				612C4B7E1C7AB071004A3D2B /* MyProfileViewController.swift in Sources */,
 				616E0C6A1C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift in Sources */,
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
+				619B97E81C7FFFCF00C87E26 /* ZhuanTiView.swift in Sources */,
 				61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */,
 				61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
