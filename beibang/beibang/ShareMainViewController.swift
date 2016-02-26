@@ -112,33 +112,38 @@ class ShareMainViewController: UIViewController {
         }
     }
 
-    func moveUp() {
+    func moveUp(doAfterMove: (()->())?) {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.upperScrollViewTopConstraint.constant = -264
             self.view.layoutIfNeeded()
-        }, completion: nil)
+        }) { (finished: Bool) -> Void in
+            if doAfterMove != nil {
+                doAfterMove!()
+            }
+        }
     }
     
-    func moveDown() {
+    func moveDown(doAfterMove: (()->())?) {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             self.upperScrollViewTopConstraint.constant = 0
             self.view.layoutIfNeeded()
-        }, completion: nil)
+        }) { (finished: Bool) -> Void in
+            if doAfterMove != nil {
+                doAfterMove!()
+            }
+        }
     }
     
     @IBAction func clickZuiXinButton(sender: AnyObject) {
-        moveDown()
-        addZuiXinView()
+        moveDown(addZuiXinView)
     }
     
     @IBAction func clickZhuanTiButton(sender: AnyObject) {
-        moveUp()
-        addZhuanTiView()
+        moveUp(addZhuanTiView)
     }
     
     @IBAction func clickAvatarButton(sender: AnyObject) {
-        moveUp()
-        addZuiXinView()
+        moveUp(addZuiXinView)
     }
 
     
