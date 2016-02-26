@@ -44,6 +44,8 @@ class ShareMainViewController: UIViewController {
     }
     
     func initializeDecoration() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         signInSignUpButton.alpha = 0
         
         avatarButton.layer.cornerRadius = 0.5 * avatarButton.bounds.size.width
@@ -136,6 +138,7 @@ class ShareMainViewController: UIViewController {
                     
                     
                     self.chaoZhiView = ChaoZhiView.instanceFromNib()
+                    self.chaoZhiView?.parentViewController = self
                     self.chaoZhiView!.touGaos = touGaos
                     self.view.addSubview(self.chaoZhiView!)
                     self.addConstraintsForBottomScrollView(self.chaoZhiView!)
@@ -159,7 +162,7 @@ class ShareMainViewController: UIViewController {
 
     func moveUp(doAfterMove: (()->())?) {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.upperScrollViewTopConstraint.constant = -264
+            self.upperScrollViewTopConstraint.constant = -280
             self.view.layoutIfNeeded()
         }) { (finished: Bool) -> Void in
             if doAfterMove != nil {
@@ -170,7 +173,7 @@ class ShareMainViewController: UIViewController {
     
     func moveDown(doAfterMove: (()->())?) {
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-            self.upperScrollViewTopConstraint.constant = 0
+            self.upperScrollViewTopConstraint.constant = -16
             self.view.layoutIfNeeded()
         }) { (finished: Bool) -> Void in
             if doAfterMove != nil {
@@ -195,7 +198,13 @@ class ShareMainViewController: UIViewController {
         moveUp(addChaoZhiView)
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showArticleDetailSegue" {
+            let viewController = segue.destinationViewController as! ArticleDetailViewController
+            let param: TouGao = sender as! TouGao
+            viewController.touGao = param
+        }
+    }
     
     
     
