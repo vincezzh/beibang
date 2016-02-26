@@ -59,7 +59,7 @@ extension MyProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        myListTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         performSegueWithIdentifier(myListOptions[indexPath.row][2], sender: nil)
     }
 }

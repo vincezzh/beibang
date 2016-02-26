@@ -27,6 +27,10 @@
 		612C4B891C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */; };
 		612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */; };
 		612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */; };
+		6162E4C51C80A42B00ED594D /* ChaoZhiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6162E4C41C80A42B00ED594D /* ChaoZhiView.xib */; };
+		6162E4C71C80A43700ED594D /* ChaoZhiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162E4C61C80A43700ED594D /* ChaoZhiView.swift */; };
+		6162E4CA1C80A67600ED594D /* ArticleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */; };
+		6162E4CB1C80A67600ED594D /* ArticleTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6162E4C91C80A67600ED594D /* ArticleTitleCell.xib */; };
 		616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */; };
 		616E0C6A1C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C691C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift */; };
 		616E0C6C1C7C0FE500A171C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616E0C6B1C7C0FE500A171C6 /* User.swift */; };
@@ -103,6 +107,10 @@
 		612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuViewController.swift; sourceTree = "<group>"; };
 		612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhangHuAnQuanViewController.swift; sourceTree = "<group>"; };
 		612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LianXiPingTaiViewController.swift; sourceTree = "<group>"; };
+		6162E4C41C80A42B00ED594D /* ChaoZhiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaoZhiView.xib; sourceTree = "<group>"; };
+		6162E4C61C80A43700ED594D /* ChaoZhiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiView.swift; sourceTree = "<group>"; };
+		6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTitleCell.swift; sourceTree = "<group>"; };
+		6162E4C91C80A67600ED594D /* ArticleTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTitleCell.xib; sourceTree = "<group>"; };
 		616E0C671C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeShouCangTableViewCell.swift; sourceTree = "<group>"; };
 		616E0C691C7C0D8F00A171C6 /* WoDeGuanZhuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuTableViewCell.swift; sourceTree = "<group>"; };
 		616E0C6B1C7C0FE500A171C6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -279,6 +287,10 @@
 				619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */,
 				619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */,
 				619B97E91C7FFFDF00C87E26 /* ZhuanTiView.xib */,
+				6162E4C61C80A43700ED594D /* ChaoZhiView.swift */,
+				6162E4C41C80A42B00ED594D /* ChaoZhiView.xib */,
+				6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */,
+				6162E4C91C80A67600ED594D /* ArticleTitleCell.xib */,
 			);
 			name = ShareComponent;
 			sourceTree = "<group>";
@@ -431,11 +443,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61113E711C698B7A0051538D /* LaunchScreen.storyboard in Resources */,
+				6162E4CB1C80A67600ED594D /* ArticleTitleCell.xib in Resources */,
 				61113E6E1C698B7A0051538D /* Assets.xcassets in Resources */,
 				617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */,
 				619B97E61C7FEF2000C87E26 /* ZuiXinView.xib in Resources */,
 				61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */,
 				6182F40B1C7F8BC700F44AC0 /* ShareFuLiView.xib in Resources */,
+				6162E4C51C80A42B00ED594D /* ChaoZhiView.xib in Resources */,
 				619B97EA1C7FFFDF00C87E26 /* ZhuanTiView.xib in Resources */,
 				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
 			);
@@ -474,6 +488,7 @@
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
 				61B258531C7BB67E006AE29A /* ImageUtil.swift in Sources */,
 				6182F4071C7F52C100F44AC0 /* ShareMainViewController.swift in Sources */,
+				6162E4C71C80A43700ED594D /* ChaoZhiView.swift in Sources */,
 				61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */,
 				612C4B811C7AB519004A3D2B /* MyProfileTableViewCell.swift in Sources */,
 				619B97E41C7FEF0200C87E26 /* ZuiXinView.swift in Sources */,
@@ -494,6 +509,7 @@
 				612C4B871C7ACD79004A3D2B /* WoDeShouCangViewController.swift in Sources */,
 				61B1567A1C7823550020B29D /* MainViewTopCell.swift in Sources */,
 				618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */,
+				6162E4CA1C80A67600ED594D /* ArticleTitleCell.swift in Sources */,
 				61113E641C698B7A0051538D /* AppDelegate.swift in Sources */,
 				61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */,
 				612C4B851C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift in Sources */,
