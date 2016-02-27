@@ -120,6 +120,25 @@ class ShareMainViewController: UIViewController {
                     author.followerNumber = "💜200"
                     tougao.author = author
                     tougao.itemLevel = 4
+                    var likes: [User] = []
+                    for _ in 0...12 {
+                        let u1 = User()
+                        u1.avatarUrl = "http://vignette1.wikia.nocookie.net/doratheexplorer/images/3/3d/Dora_photo9.png"
+                        likes.append(u1)
+                    }
+                    tougao.likeUsers = likes
+                    var comments: [Comment] = []
+                    for _ in 0...5 {
+                        let c1 = Comment()
+                        c1.content = "发现了什么好价格和不能错过的优惠活动"
+                        c1.postDate = "2016-12-20"
+                        let u = User()
+                        u.name = "Eason妈妈"
+                        u.avatarUrl = "http://vignette1.wikia.nocookie.net/doratheexplorer/images/3/3d/Dora_photo9.png"
+                        c1.user = u
+                        comments.append(c1)
+                    }
+                    tougao.comments = comments
                     touGaos.append(tougao)
                     
                     let tougao1 = TouGao()

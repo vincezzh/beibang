@@ -45,6 +45,8 @@
 		618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D61C6AE25200A1E5DA /* SignInViewController.swift */; };
 		618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */; };
 		618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */; };
+		619819341C81451B00771ACC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619819331C81451B00771ACC /* CommentCell.swift */; };
+		619819361C81541100771ACC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619819351C81541100771ACC /* Comment.swift */; };
 		619B97E41C7FEF0200C87E26 /* ZuiXinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */; };
 		619B97E61C7FEF2000C87E26 /* ZuiXinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */; };
 		619B97E81C7FFFCF00C87E26 /* ZhuanTiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */; };
@@ -126,6 +128,8 @@
 		618426D61C6AE25200A1E5DA /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		618426D81C6AEEA900A1E5DA /* RegisterStepOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepOneViewController.swift; sourceTree = "<group>"; };
 		618426DA1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterStepTwoViewController.swift; sourceTree = "<group>"; };
+		619819331C81451B00771ACC /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		619819351C81541100771ACC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZuiXinView.swift; sourceTree = "<group>"; };
 		619B97E51C7FEF2000C87E26 /* ZuiXinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZuiXinView.xib; sourceTree = "<group>"; };
 		619B97E71C7FFFCF00C87E26 /* ZhuanTiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhuanTiView.swift; sourceTree = "<group>"; };
@@ -243,8 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				611EF63F1C6E7E2000469639 /* UNAlertView.swift */,
-				61E1FAC51C7244EB00EEC642 /* Editor */,
 				61B258521C7BB67E006AE29A /* ImageUtil.swift */,
+				61E1FAC51C7244EB00EEC642 /* Editor */,
 			);
 			name = CommonComponents;
 			sourceTree = "<group>";
@@ -294,6 +298,7 @@
 				6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */,
 				6162E4C91C80A67600ED594D /* ArticleTitleCell.xib */,
 				6162E4CC1C80E60500ED594D /* ArticleDetailViewController.swift */,
+				619819331C81451B00771ACC /* CommentCell.swift */,
 			);
 			name = ShareComponent;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 			children = (
 				61F1A5351C763BF600CAA9E1 /* TouGao.swift */,
 				616E0C6B1C7C0FE500A171C6 /* User.swift */,
+				619819351C81541100771ACC /* Comment.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -482,6 +488,7 @@
 				61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */,
 				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
+				619819341C81451B00771ACC /* CommentCell.swift in Sources */,
 				612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */,
 				617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */,
 				610456411C7D5A1F0078459E /* WoDeGuanZhuDetailViewController.swift in Sources */,
@@ -503,6 +510,7 @@
 				61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
 				612C4B831C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift in Sources */,
+				619819361C81541100771ACC /* Comment.swift in Sources */,
 				61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */,
 				611EF6401C6E7E2000469639 /* UNAlertView.swift in Sources */,
 				61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */,

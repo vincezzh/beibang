@@ -20,4 +20,16 @@ class ImageUtil {
         })
         imageTask.resume()
     }
+    
+    class func loadImage(url: String, button: UIButton) {
+        let session = NSURLSession.sharedSession()
+        let imgURL: NSURL = NSURL(string: url)!
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        let imageTask = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            if error == nil {
+                button.setImage(UIImage(data: data!), forState: UIControlState.Normal)
+            }
+        })
+        imageTask.resume()
+    }
 }

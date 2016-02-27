@@ -18,5 +18,7 @@ class TouGao {
     var contentText: NSAttributedString!
     var postDateString: String!
     var likeNumber: String!
+    var likeUsers: [User] = []
     var author: User!
+    var comments: [Comment] = []
 }

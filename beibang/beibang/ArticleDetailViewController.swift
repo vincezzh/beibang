@@ -28,12 +28,19 @@ class ArticleDetailViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var tagLabelsScrollView: UIScrollView!
+    @IBOutlet weak var likeNumberLabel: UILabel!
+    @IBOutlet weak var followerScrollView: UIScrollView!
+    @IBOutlet weak var commentNumberLabel: UILabel!
+    @IBOutlet weak var commentTableView: UITableView!
+    @IBOutlet weak var writeCommentTextField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeDecoration()
         initializeData()
+        initializeAction()
     }
     
     func initializeDecoration() {
@@ -71,6 +78,8 @@ class ArticleDetailViewController: UIViewController {
         bookmarkButton.clipsToBounds = true
         shareButton.layer.cornerRadius = 5
         shareButton.clipsToBounds = true
+        writeCommentTextField.layer.cornerRadius = 5
+        sendButton.layer.cornerRadius = 5
     }
     
     func initializeData() {
@@ -80,6 +89,12 @@ class ArticleDetailViewController: UIViewController {
         contentTextView.attributedText = touGao.contentText
         setItemLevel(touGao.itemLevel)
         addTagsInTagScrollView(touGao.tagLabelArray)
+        addLikeUsersScrollView(touGao.likeUsers)
+    }
+    
+    func initializeAction() {
+        commentTableView.delegate = self
+        commentTableView.dataSource = self
     }
     
     func goBack() {
@@ -119,8 +134,39 @@ class ArticleDetailViewController: UIViewController {
         tagLabelsScrollView.contentSize = CGSizeMake(CGFloat(tags.count * 55), tagLabelsScrollView.bounds.height)
     }
     
-    
+    func addLikeUsersScrollView(users: [User]) {
+        for index in 0...users.count-1 {
+            let button = UIButton()
+            ImageUtil.loadImage(users[index].avatarUrl, button: button)
+            button.frame = CGRectMake(CGFloat(index * (35 + 8)), 2, 35, 35)
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.clipsToBounds = true
+            followerScrollView.addSubview(button)
+        }
+        followerScrollView.contentSize = CGSizeMake(CGFloat(users.count * (35 + 8)), 44)
+    }
     
     
 
+}
+
+extension ArticleDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return touGao.comments.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("commentCell") as! CommentCell
+        cell.initializeData(touGao.comments[indexPath.row])
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        parentViewController.performSegueWithIdentifier("showArticleDetailSegue", sender: touGaos[indexPath.row])
+    }
 }
