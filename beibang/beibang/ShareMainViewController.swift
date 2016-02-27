@@ -117,8 +117,9 @@ class ShareMainViewController: UIViewController {
                     let author = User()
                     author.name = "熊爸爸"
                     author.avatarUrl = "http://www.bmw.ca/content/dam/bmw/common/all-models/3-series/sedan/2015/at-a-glance/3-series-m-sport-package-04.jpg/jcr:content/renditions/cq5dam.resized.img.485.low.time1447942782786.jpg"
+                    author.followerNumber = "💜200"
                     tougao.author = author
-                    tougao.likeNumber = "💜200"
+                    tougao.itemLevel = 4
                     touGaos.append(tougao)
                     
                     let tougao1 = TouGao()
@@ -129,8 +130,9 @@ class ShareMainViewController: UIViewController {
                     let author1 = User()
                     author1.name = "潮妈小辣椒"
                     author1.avatarUrl = "http://cdn.bmwblog.com/wp-content/uploads/BMW-10-750x500.jpg"
+                    author.followerNumber = "💜87"
                     tougao1.author = author
-                    tougao1.likeNumber = "💜87"
+                    tougao1.itemLevel = 5
                     touGaos.append(tougao1)
                     
                     
