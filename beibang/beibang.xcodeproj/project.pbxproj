@@ -56,6 +56,21 @@
 		61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */; };
 		61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */; };
 		61B258531C7BB67E006AE29A /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B258521C7BB67E006AE29A /* ImageUtil.swift */; };
+		61C39A1E1C83F2AE00F51443 /* DKCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A0B1C83F2AE00F51443 /* DKCamera.swift */; };
+		61C39A1F1C83F2AE00F51443 /* DKCameraResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61C39A0C1C83F2AE00F51443 /* DKCameraResource.bundle */; };
+		61C39A201C83F2AE00F51443 /* DKGroupDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A0F1C83F2AE00F51443 /* DKGroupDataManager.swift */; };
+		61C39A211C83F2AE00F51443 /* DKAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A111C83F2AE00F51443 /* DKAsset.swift */; };
+		61C39A221C83F2AE00F51443 /* DKAssetGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A121C83F2AE00F51443 /* DKAssetGroup.swift */; };
+		61C39A231C83F2AE00F51443 /* DKImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A131C83F2AE00F51443 /* DKImageManager.swift */; };
+		61C39A241C83F2AE00F51443 /* DKImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61C39A151C83F2AE00F51443 /* DKImagePickerController.bundle */; };
+		61C39A251C83F2AE00F51443 /* DKImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A161C83F2AE00F51443 /* DKImagePickerController.swift */; };
+		61C39A261C83F2AE00F51443 /* DKImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A171C83F2AE00F51443 /* DKImageResource.swift */; };
+		61C39A271C83F2AE00F51443 /* DKPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A181C83F2AE00F51443 /* DKPopoverViewController.swift */; };
+		61C39A281C83F2AE00F51443 /* DKAssetGroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1A1C83F2AE00F51443 /* DKAssetGroupDetailVC.swift */; };
+		61C39A291C83F2AE00F51443 /* DKAssetGroupGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1B1C83F2AE00F51443 /* DKAssetGroupGridLayout.swift */; };
+		61C39A2A1C83F2AE00F51443 /* DKAssetGroupListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1C1C83F2AE00F51443 /* DKAssetGroupListVC.swift */; };
+		61C39A2B1C83F2AE00F51443 /* DKPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1D1C83F2AE00F51443 /* DKPermissionView.swift */; };
+		61C39A2D1C83F30400F51443 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A2C1C83F30400F51443 /* TestViewController.swift */; };
 		61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */; };
 		61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC61C7245D500EEC642 /* BlogEditor.swift */; };
 		61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E1FAC81C72486300EEC642 /* colorPalette.plist */; };
@@ -139,6 +154,21 @@
 		61B1567B1C78236D0020B29D /* MainViewFollowingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewFollowingCell.swift; sourceTree = "<group>"; };
 		61B258501C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeTouGaoTableViewCell.swift; sourceTree = "<group>"; };
 		61B258521C7BB67E006AE29A /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		61C39A0B1C83F2AE00F51443 /* DKCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKCamera.swift; sourceTree = "<group>"; };
+		61C39A0C1C83F2AE00F51443 /* DKCameraResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DKCameraResource.bundle; sourceTree = "<group>"; };
+		61C39A0F1C83F2AE00F51443 /* DKGroupDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKGroupDataManager.swift; sourceTree = "<group>"; };
+		61C39A111C83F2AE00F51443 /* DKAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAsset.swift; sourceTree = "<group>"; };
+		61C39A121C83F2AE00F51443 /* DKAssetGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroup.swift; sourceTree = "<group>"; };
+		61C39A131C83F2AE00F51443 /* DKImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKImageManager.swift; sourceTree = "<group>"; };
+		61C39A151C83F2AE00F51443 /* DKImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DKImagePickerController.bundle; sourceTree = "<group>"; };
+		61C39A161C83F2AE00F51443 /* DKImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKImagePickerController.swift; sourceTree = "<group>"; };
+		61C39A171C83F2AE00F51443 /* DKImageResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKImageResource.swift; sourceTree = "<group>"; };
+		61C39A181C83F2AE00F51443 /* DKPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKPopoverViewController.swift; sourceTree = "<group>"; };
+		61C39A1A1C83F2AE00F51443 /* DKAssetGroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroupDetailVC.swift; sourceTree = "<group>"; };
+		61C39A1B1C83F2AE00F51443 /* DKAssetGroupGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroupGridLayout.swift; sourceTree = "<group>"; };
+		61C39A1C1C83F2AE00F51443 /* DKAssetGroupListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroupListVC.swift; sourceTree = "<group>"; };
+		61C39A1D1C83F2AE00F51443 /* DKPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKPermissionView.swift; sourceTree = "<group>"; };
+		61C39A2C1C83F30400F51443 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoEditorViewController.swift; sourceTree = "<group>"; };
 		61E1FAC61C7245D500EEC642 /* BlogEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEditor.swift; sourceTree = "<group>"; };
 		61E1FAC81C72486300EEC642 /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
@@ -198,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				61113E631C698B7A0051538D /* AppDelegate.swift */,
+				61C39A081C83F23700F51443 /* Utility */,
 				61B1567D1C7823960020B29D /* MainViewController */,
 				611EF6411C6E7E3600469639 /* CommonComponents */,
 				611EF63C1C6E715200469639 /* SignInUpComponent */,
@@ -312,6 +343,84 @@
 				61B156771C78079B0020B29D /* TouGaoPopupButtonsViewController.swift */,
 			);
 			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		61C39A081C83F23700F51443 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A091C83F24D00F51443 /* DKImagePicker */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		61C39A091C83F24D00F51443 /* DKImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A0A1C83F2AE00F51443 /* DKCamera */,
+				61C39A0D1C83F2AE00F51443 /* DKImageManager */,
+				61C39A141C83F2AE00F51443 /* DKImagePickerController */,
+				61C39A2C1C83F30400F51443 /* TestViewController.swift */,
+			);
+			name = DKImagePicker;
+			sourceTree = "<group>";
+		};
+		61C39A0A1C83F2AE00F51443 /* DKCamera */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A0B1C83F2AE00F51443 /* DKCamera.swift */,
+				61C39A0C1C83F2AE00F51443 /* DKCameraResource.bundle */,
+			);
+			path = DKCamera;
+			sourceTree = "<group>";
+		};
+		61C39A0D1C83F2AE00F51443 /* DKImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A0E1C83F2AE00F51443 /* Data */,
+				61C39A131C83F2AE00F51443 /* DKImageManager.swift */,
+			);
+			path = DKImageManager;
+			sourceTree = "<group>";
+		};
+		61C39A0E1C83F2AE00F51443 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A0F1C83F2AE00F51443 /* DKGroupDataManager.swift */,
+				61C39A101C83F2AE00F51443 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		61C39A101C83F2AE00F51443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A111C83F2AE00F51443 /* DKAsset.swift */,
+				61C39A121C83F2AE00F51443 /* DKAssetGroup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61C39A141C83F2AE00F51443 /* DKImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A151C83F2AE00F51443 /* DKImagePickerController.bundle */,
+				61C39A161C83F2AE00F51443 /* DKImagePickerController.swift */,
+				61C39A171C83F2AE00F51443 /* DKImageResource.swift */,
+				61C39A181C83F2AE00F51443 /* DKPopoverViewController.swift */,
+				61C39A191C83F2AE00F51443 /* View */,
+			);
+			path = DKImagePickerController;
+			sourceTree = "<group>";
+		};
+		61C39A191C83F2AE00F51443 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61C39A1A1C83F2AE00F51443 /* DKAssetGroupDetailVC.swift */,
+				61C39A1B1C83F2AE00F51443 /* DKAssetGroupGridLayout.swift */,
+				61C39A1C1C83F2AE00F51443 /* DKAssetGroupListVC.swift */,
+				61C39A1D1C83F2AE00F51443 /* DKPermissionView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		61E1FAC51C7244EB00EEC642 /* Editor */ = {
@@ -457,9 +566,11 @@
 				617EFF8E1C741C8700C09174 /* PopupView.xib in Resources */,
 				619B97E61C7FEF2000C87E26 /* ZuiXinView.xib in Resources */,
 				61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */,
+				61C39A241C83F2AE00F51443 /* DKImagePickerController.bundle in Resources */,
 				6182F40B1C7F8BC700F44AC0 /* ShareFuLiView.xib in Resources */,
 				6162E4C51C80A42B00ED594D /* ChaoZhiView.xib in Resources */,
 				619B97EA1C7FFFDF00C87E26 /* ZhuanTiView.xib in Resources */,
+				61C39A1F1C83F2AE00F51443 /* DKCameraResource.bundle in Resources */,
 				61113E691C698B7A0051538D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +599,7 @@
 				61E1FACC1C72486300EEC642 /* ColorPickerViewController.swift in Sources */,
 				618426DB1C6AF2B400A1E5DA /* RegisterStepTwoViewController.swift in Sources */,
 				61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */,
+				61C39A291C83F2AE00F51443 /* DKAssetGroupGridLayout.swift in Sources */,
 				619819341C81451B00771ACC /* CommentCell.swift in Sources */,
 				612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */,
 				617EFF8F1C741C8700C09174 /* PopupView.swift in Sources */,
@@ -496,7 +608,10 @@
 				61E1FACD1C72486300EEC642 /* Notice.swift in Sources */,
 				61113E6C1C698B7A0051538D /* beibang.xcdatamodeld in Sources */,
 				61113E661C698B7A0051538D /* MainViewController.swift in Sources */,
+				61C39A2A1C83F2AE00F51443 /* DKAssetGroupListVC.swift in Sources */,
+				61C39A1E1C83F2AE00F51443 /* DKCamera.swift in Sources */,
 				61B258531C7BB67E006AE29A /* ImageUtil.swift in Sources */,
+				61C39A271C83F2AE00F51443 /* DKPopoverViewController.swift in Sources */,
 				6182F4071C7F52C100F44AC0 /* ShareMainViewController.swift in Sources */,
 				6162E4C71C80A43700ED594D /* ChaoZhiView.swift in Sources */,
 				61B156781C78079B0020B29D /* TouGaoPopupButtonsViewController.swift in Sources */,
@@ -507,6 +622,7 @@
 				618426D71C6AE25200A1E5DA /* SignInViewController.swift in Sources */,
 				619B97E81C7FFFCF00C87E26 /* ZhuanTiView.swift in Sources */,
 				61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */,
+				61C39A211C83F2AE00F51443 /* DKAsset.swift in Sources */,
 				61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */,
 				611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */,
 				612C4B831C7ACD61004A3D2B /* WoDeBaoBaoViewController.swift in Sources */,
@@ -514,11 +630,15 @@
 				61B1567C1C78236D0020B29D /* MainViewFollowingCell.swift in Sources */,
 				611EF6401C6E7E2000469639 /* UNAlertView.swift in Sources */,
 				61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */,
+				61C39A251C83F2AE00F51443 /* DKImagePickerController.swift in Sources */,
 				61F1A5361C763BF600CAA9E1 /* TouGao.swift in Sources */,
 				612C4B891C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift in Sources */,
+				61C39A261C83F2AE00F51443 /* DKImageResource.swift in Sources */,
+				61C39A201C83F2AE00F51443 /* DKGroupDataManager.swift in Sources */,
 				6162E4CD1C80E60500ED594D /* ArticleDetailViewController.swift in Sources */,
 				612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */,
 				612C4B871C7ACD79004A3D2B /* WoDeShouCangViewController.swift in Sources */,
+				61C39A2B1C83F2AE00F51443 /* DKPermissionView.swift in Sources */,
 				61B1567A1C7823550020B29D /* MainViewTopCell.swift in Sources */,
 				618426D91C6AEEA900A1E5DA /* RegisterStepOneViewController.swift in Sources */,
 				6162E4CA1C80A67600ED594D /* ArticleTitleCell.swift in Sources */,
@@ -526,7 +646,11 @@
 				61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */,
 				612C4B851C7ACD6D004A3D2B /* WoDeTouGaoViewController.swift in Sources */,
 				61E3FF5C1C6ED7A400EAAD4D /* ChaoZhiBaoLiaoSubmitViewController.swift in Sources */,
+				61C39A281C83F2AE00F51443 /* DKAssetGroupDetailVC.swift in Sources */,
+				61C39A231C83F2AE00F51443 /* DKImageManager.swift in Sources */,
 				6182F4091C7F879400F44AC0 /* ShareFuLiView.swift in Sources */,
+				61C39A221C83F2AE00F51443 /* DKAssetGroup.swift in Sources */,
+				61C39A2D1C83F30400F51443 /* TestViewController.swift in Sources */,
 				616E0C6C1C7C0FE500A171C6 /* User.swift in Sources */,
 				616E0C681C7BFF1600A171C6 /* WoDeShouCangTableViewCell.swift in Sources */,
 				61816CC11C7E96A500B98C1A /* WoDeBaoBaoPregnentViewController.swift in Sources */,

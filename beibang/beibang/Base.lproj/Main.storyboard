@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i7L-0a-vRP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X4p-Ob-HOA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="Scl-nk-k1q">
+            <objects>
+                <viewController id="X4p-Ob-HOA" customClass="TestViewController" customModule="beibang" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bbC-ho-LUv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hz0-FK-2oR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wtA-uc-9sM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60E-ef-rYt">
+                                <rect key="frame" x="277" y="70" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="X4p-Ob-HOA" eventType="touchUpInside" id="dGX-sR-3Dd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="60E-ef-rYt" firstAttribute="centerX" secondItem="wtA-uc-9sM" secondAttribute="centerX" id="Q4e-iG-qqf"/>
+                            <constraint firstItem="60E-ef-rYt" firstAttribute="top" secondItem="bbC-ho-LUv" secondAttribute="bottom" constant="50" id="ttf-4A-6Je"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxG-AZ-Mmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-182"/>
+        </scene>
         <!--Share Main View Controller-->
         <scene sceneID="z3R-Qx-bP1">
             <objects>
