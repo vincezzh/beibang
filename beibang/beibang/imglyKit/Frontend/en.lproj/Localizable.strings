@@ -17,36 +17,36 @@
 "camera-view-controller.error-saving-video.cancel" = "Cancel";
 
 // Main Editor
-"main-editor.title" = "Editor";
-"main-editor.button.magic" = "Magic";
-"main-editor.button.filter" = "Filter";
-"main-editor.button.stickers" = "Stickers";
-"main-editor.button.orientation" = "Orientation";
-"main-editor.button.focus" = "Focus";
-"main-editor.button.crop" = "Crop";
-"main-editor.button.brightness" = "Brightness";
-"main-editor.button.contrast" = "Contrast";
-"main-editor.button.saturation" = "Saturation";
-"main-editor.button.text" = "Text";
+"main-editor.title" = "编辑";
+"main-editor.button.magic" = "魔法棒";
+"main-editor.button.filter" = "过滤器";
+"main-editor.button.stickers" = "贴纸";
+"main-editor.button.orientation" = "转向";
+"main-editor.button.focus" = "焦点";
+"main-editor.button.crop" = "修剪";
+"main-editor.button.brightness" = "亮度";
+"main-editor.button.contrast" = "对比度";
+"main-editor.button.saturation" = "饱和度";
+"main-editor.button.text" = "文字";
 
 // Filter Editor
-"filter-editor.title" = "Filter";
+"filter-editor.title" = "过滤器";
 
 // Stickers Editor
-"stickers-editor.title" = "Stickers";
+"stickers-editor.title" = "贴纸";
 
 // Orientation Editor
-"orientation-editor.title" = "Orientation";
-"orientation-editor.rotate-left" = "Rotate L";
-"orientation-editor.rotate-right" = "Rotate R";
-"orientation-editor.flip-horizontally" = "Flip H";
-"orientation-editor.flip-vertically" = "Flip V";
+"orientation-editor.title" = "转向";
+"orientation-editor.rotate-left" = "左转";
+"orientation-editor.rotate-right" = "右转";
+"orientation-editor.flip-horizontally" = "水平翻转";
+"orientation-editor.flip-vertically" = "垂直翻转";
 
 // Focus Editor
-"focus-editor.title" = "Focus";
-"focus-editor.off" = "Off";
-"focus-editor.linear" = "Linear";
-"focus-editor.radial" = "Radial";
+"focus-editor.title" = "焦点";
+"focus-editor.off" = "无";
+"focus-editor.linear" = "线形";
+"focus-editor.radial" = "辐射";
 
 // Crop Editor
 "crop-editor.title" = "Crop";
@@ -56,13 +56,13 @@
 "crop-editor.16-to-9" = "16:9";
 
 // Brightness Editor
-"brightness-editor.title" = "Brightness";
+"brightness-editor.title" = "亮度";
 
 // Contrast Editor
-"contrast-editor.title" = "Contrast";
+"contrast-editor.title" = "对比度";
 
 // Saturation Editor
-"saturation-editor.title" = "Saturation";
+"saturation-editor.title" = "饱和度";
 
 // Text Editor
-"text-editor.title" = "Text";
+"text-editor.title" = "文字";
