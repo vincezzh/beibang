@@ -11,6 +11,8 @@ import UIKit
 class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var assets: [DKAsset]?
+    var imageButtons: [UIButton] = []
+    var currentSelectedImageIndex = 0
     let pictureEditor: PictureEditor = PictureEditor()
     
     @IBOutlet weak var selectedImageView: UIImageView!
@@ -60,20 +62,39 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
         confirmButton.layer.cornerRadius = 5
         
         if assets != nil {
+            self.imageButtons.removeAll()
+            
+            let imageButtonWidth = CGFloat(56)
+            let imageButtonHeight = CGFloat(56)
+            let buttonsWidth = assets!.count * Int(imageButtonWidth) + (assets!.count - 1) * 4
+            var startX = 0
+            if Int(self.view.bounds.width) > buttonsWidth {
+                startX = (Int(self.view.bounds.width) - buttonsWidth) / 2
+            }
             for index in 0...assets!.count-1 {
                 assets![index].fetchOriginalImage(true, completeBlock: { (image, info) -> Void in
-                    if index == 0 {
-                        self.selectedImageView.image = image
-                    }
-                    
                     let imageButton: UIButton = UIButton()
+                    imageButton.tag = index
                     imageButton.setImage(image, forState: UIControlState.Normal)
-                    imageButton.frame = CGRectMake(CGFloat(index * 60) + 4, 4, 56, 56)
+                    imageButton.frame = CGRectMake(CGFloat(startX + index * (Int(imageButtonWidth) + 4)), 4, imageButtonWidth, imageButtonHeight)
                     imageButton.addTarget(self, action: "clickImageButton:", forControlEvents: UIControlEvents.TouchUpInside)
                     self.imageListScrollView.addSubview(imageButton)
+                    self.imageButtons.append(imageButton)
+                    
+                    if index == 0 {
+                        self.selectedImageView.image = image
+                        imageButton.layer.borderWidth = 2
+                        imageButton.layer.borderColor = UIColor(red:154/255.0, green:127/255.0, blue:252/255.0, alpha: 1.0).CGColor
+                    }
                 })
             }
-            imageListScrollView.contentSize = CGSizeMake(CGFloat(assets!.count * 56 + 4), 56)
+            
+            let contentSizeWidth = CGFloat(assets!.count * 56)
+            if self.view.bounds.width < contentSizeWidth {
+                imageListScrollView.contentSize = CGSizeMake(contentSizeWidth, imageButtonHeight)
+            }else {
+                imageListScrollView.contentSize = CGSizeMake(self.view.bounds.width, imageButtonHeight)
+            }
         }
     }
     
@@ -90,8 +111,15 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func clickImageButton(sender: UIButton!) {
         selectedImageView.image = sender.imageView?.image
-        sender.layer.borderWidth = 1
-        sender.layer.borderColor = UIColor.redColor().CGColor
+        
+        if imageButtons.count > 0 {
+            for index in 0...imageButtons.count-1 {
+                imageButtons[index].layer.borderWidth = 0
+            }
+        }
+        currentSelectedImageIndex = sender.tag
+        sender.layer.borderWidth = 2
+        sender.layer.borderColor = UIColor(red:154/255.0, green:127/255.0, blue:252/255.0, alpha: 1.0).CGColor
     }
     
     func tapSelectedImageView(sender: UITapGestureRecognizer) {
@@ -116,6 +144,7 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     func editorCompletionBlock(result: IMGLYEditorResult, image: UIImage?) {
         if image != nil {
             selectedImageView.image = image
+            imageButtons[currentSelectedImageIndex].setImage(image, forState: UIControlState.Normal)
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
