@@ -17,6 +17,8 @@
 		61113E7C1C698B7A0051538D /* beibangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E7B1C698B7A0051538D /* beibangTests.swift */; };
 		61113E871C698B7A0051538D /* beibangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E861C698B7A0051538D /* beibangUITests.swift */; };
 		61113E951C6990E30051538D /* SignInEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61113E941C6990E30051538D /* SignInEntryViewController.swift */; };
+		61139C511C86879B009100EE /* PictureEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61139C501C86879B009100EE /* PictureEditor.swift */; };
+		61139C531C868D77009100EE /* PictureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61139C521C868D77009100EE /* PictureListViewController.swift */; };
 		611EF63E1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */; };
 		611EF6401C6E7E2000469639 /* UNAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611EF63F1C6E7E2000469639 /* UNAlertView.swift */; };
 		612C4B7E1C7AB071004A3D2B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B7D1C7AB071004A3D2B /* MyProfileViewController.swift */; };
@@ -248,7 +250,6 @@
 		61842D801C853F2800FBEF64 /* NSTimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842CB51C853F2800FBEF64 /* NSTimerExtension.swift */; };
 		61842D811C853F2800FBEF64 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842CB61C853F2800FBEF64 /* UIImageExtension.swift */; };
 		61842D821C853F2800FBEF64 /* IMGLYFixedFilterStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842CB71C853F2800FBEF64 /* IMGLYFixedFilterStack.swift */; };
-		61842D8A1C8541EC00FBEF64 /* Test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842D891C8541EC00FBEF64 /* Test2ViewController.swift */; };
 		619819341C81451B00771ACC /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619819331C81451B00771ACC /* CommentCell.swift */; };
 		619819361C81541100771ACC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619819351C81541100771ACC /* Comment.swift */; };
 		619B97E41C7FEF0200C87E26 /* ZuiXinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */; };
@@ -274,7 +275,6 @@
 		61C39A291C83F2AE00F51443 /* DKAssetGroupGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1B1C83F2AE00F51443 /* DKAssetGroupGridLayout.swift */; };
 		61C39A2A1C83F2AE00F51443 /* DKAssetGroupListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1C1C83F2AE00F51443 /* DKAssetGroupListVC.swift */; };
 		61C39A2B1C83F2AE00F51443 /* DKPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A1D1C83F2AE00F51443 /* DKPermissionView.swift */; };
-		61C39A2D1C83F30400F51443 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C39A2C1C83F30400F51443 /* TestViewController.swift */; };
 		61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */; };
 		61E1FAC71C7245D500EEC642 /* BlogEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1FAC61C7245D500EEC642 /* BlogEditor.swift */; };
 		61E1FACB1C72486300EEC642 /* colorPalette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E1FAC81C72486300EEC642 /* colorPalette.plist */; };
@@ -319,6 +319,8 @@
 		61113E861C698B7A0051538D /* beibangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beibangUITests.swift; sourceTree = "<group>"; };
 		61113E881C698B7A0051538D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61113E941C6990E30051538D /* SignInEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInEntryViewController.swift; sourceTree = "<group>"; };
+		61139C501C86879B009100EE /* PictureEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureEditor.swift; sourceTree = "<group>"; };
+		61139C521C868D77009100EE /* PictureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureListViewController.swift; sourceTree = "<group>"; };
 		611EF63D1C6E76B200469639 /* ChaoZhiBaoLiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiBaoLiaoViewController.swift; sourceTree = "<group>"; };
 		611EF63F1C6E7E2000469639 /* UNAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNAlertView.swift; sourceTree = "<group>"; };
 		612C4B7D1C7AB071004A3D2B /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
@@ -552,7 +554,6 @@
 		61842CB61C853F2800FBEF64 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		61842CB71C853F2800FBEF64 /* IMGLYFixedFilterStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMGLYFixedFilterStack.swift; sourceTree = "<group>"; };
 		61842D881C85407600FBEF64 /* beibang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beibang-Bridging-Header.h"; sourceTree = "<group>"; };
-		61842D891C8541EC00FBEF64 /* Test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Test2ViewController.swift; path = Frontend/Test2ViewController.swift; sourceTree = "<group>"; };
 		619819331C81451B00771ACC /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		619819351C81541100771ACC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		619B97E31C7FEF0200C87E26 /* ZuiXinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZuiXinView.swift; sourceTree = "<group>"; };
@@ -578,7 +579,6 @@
 		61C39A1B1C83F2AE00F51443 /* DKAssetGroupGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroupGridLayout.swift; sourceTree = "<group>"; };
 		61C39A1C1C83F2AE00F51443 /* DKAssetGroupListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKAssetGroupListVC.swift; sourceTree = "<group>"; };
 		61C39A1D1C83F2AE00F51443 /* DKPermissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKPermissionView.swift; sourceTree = "<group>"; };
-		61C39A2C1C83F30400F51443 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		61E1FAC31C7183E700EEC642 /* TouGaoEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouGaoEditorViewController.swift; sourceTree = "<group>"; };
 		61E1FAC61C7245D500EEC642 /* BlogEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEditor.swift; sourceTree = "<group>"; };
 		61E1FAC81C72486300EEC642 /* colorPalette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorPalette.plist; sourceTree = "<group>"; };
@@ -645,6 +645,7 @@
 				61E3FF5D1C6ED7AB00EAAD4D /* TouGaoComponent */,
 				612C4B7F1C7AB088004A3D2B /* WoDeComponent */,
 				6182F4051C7F52AB00F44AC0 /* ShareComponent */,
+				61139C4F1C868690009100EE /* PictureComponent */,
 				61F1A5371C763C0100CAA9E1 /* model */,
 				61113E671C698B7A0051538D /* Main.storyboard */,
 				61113E6D1C698B7A0051538D /* Assets.xcassets */,
@@ -672,6 +673,15 @@
 				61113E881C698B7A0051538D /* Info.plist */,
 			);
 			path = beibangUITests;
+			sourceTree = "<group>";
+		};
+		61139C4F1C868690009100EE /* PictureComponent */ = {
+			isa = PBXGroup;
+			children = (
+				61139C501C86879B009100EE /* PictureEditor.swift */,
+				61139C521C868D77009100EE /* PictureListViewController.swift */,
+			);
+			name = PictureComponent;
 			sourceTree = "<group>";
 		};
 		611EF63C1C6E715200469639 /* SignInUpComponent */ = {
@@ -750,7 +760,6 @@
 			children = (
 				61842BE11C853F2800FBEF64 /* Backend */,
 				61842C871C853F2800FBEF64 /* Frontend */,
-				61842D891C8541EC00FBEF64 /* Test2ViewController.swift */,
 			);
 			path = imglyKit;
 			sourceTree = "<group>";
@@ -1063,7 +1072,6 @@
 				61C39A0A1C83F2AE00F51443 /* DKCamera */,
 				61C39A0D1C83F2AE00F51443 /* DKImageManager */,
 				61C39A141C83F2AE00F51443 /* DKImagePickerController */,
-				61C39A2C1C83F30400F51443 /* TestViewController.swift */,
 			);
 			name = DKImagePicker;
 			sourceTree = "<group>";
@@ -1455,7 +1463,6 @@
 				61842D1C1C853F2800FBEF64 /* IMGLYBleachedFilter.swift in Sources */,
 				61B258511C7BB16A006AE29A /* WoDeTouGaoTableViewCell.swift in Sources */,
 				61842D171C853F2800FBEF64 /* IMGLYTiltshiftFilter.swift in Sources */,
-				61842D8A1C8541EC00FBEF64 /* Test2ViewController.swift in Sources */,
 				61842D0C1C853F2800FBEF64 /* IMGLYFontImporter.swift in Sources */,
 				61C39A211C83F2AE00F51443 /* DKAsset.swift in Sources */,
 				61816CC31C7EA27600B98C1A /* WoDeBaoBaoMomViewController.swift in Sources */,
@@ -1483,6 +1490,7 @@
 				61842D631C853F2800FBEF64 /* IMGLYColorButton.swift in Sources */,
 				61842D4D1C853F2800FBEF64 /* IMGLYSinFilter.swift in Sources */,
 				61842D381C853F2800FBEF64 /* IMGLYKeenFilter.swift in Sources */,
+				61139C531C868D77009100EE /* PictureListViewController.swift in Sources */,
 				61E1FAC41C7183E700EEC642 /* TouGaoEditorViewController.swift in Sources */,
 				61842D671C853F2800FBEF64 /* IMGLYEditorViewController.swift in Sources */,
 				61C39A251C83F2AE00F51443 /* DKImagePickerController.swift in Sources */,
@@ -1535,6 +1543,7 @@
 				61C39A281C83F2AE00F51443 /* DKAssetGroupDetailVC.swift in Sources */,
 				61C39A231C83F2AE00F51443 /* DKImageManager.swift in Sources */,
 				61842D401C853F2800FBEF64 /* IMGLYNoGreenFilter.swift in Sources */,
+				61139C511C86879B009100EE /* PictureEditor.swift in Sources */,
 				61842D391C853F2800FBEF64 /* IMGLYLeninFilter.swift in Sources */,
 				61842D191C853F2800FBEF64 /* IMGLYAD1920Filter.swift in Sources */,
 				6182F4091C7F879400F44AC0 /* ShareFuLiView.swift in Sources */,
@@ -1549,7 +1558,6 @@
 				61842D281C853F2800FBEF64 /* IMGLYEightiesFilter.swift in Sources */,
 				61842D751C853F2800FBEF64 /* IMGLYSliderEditorViewController.swift in Sources */,
 				61842D5E1C853F2800FBEF64 /* IMGLYActionButton.swift in Sources */,
-				61C39A2D1C83F30400F51443 /* TestViewController.swift in Sources */,
 				61842D181C853F2800FBEF64 /* LUTToNSDataConverter.m in Sources */,
 				61842D621C853F2800FBEF64 /* IMGLYCircleGradientView.swift in Sources */,
 				61842D611C853F2800FBEF64 /* IMGLYButtonCollectionViewCell.swift in Sources */,
