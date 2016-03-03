@@ -10,14 +10,24 @@ import UIKit
 
 class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    var onDataAvailable : ((images: [UIImage]) -> ())?
     var assets: [DKAsset]?
     var imageButtons: [UIButton] = []
     var currentSelectedImageIndex = 0
-    let pictureEditor: PictureEditor = PictureEditor()
     
     @IBOutlet weak var selectedImageView: UIImageView!
     @IBOutlet weak var imageListScrollView: UIScrollView!
     @IBOutlet weak var confirmButton: UIButton!
+    
+    func sendData(images: [UIImage]) {
+        self.onDataAvailable?(images: images)
+    }
+    
+    func dismissViewController(images: [UIImage]) {
+        self.dismissViewControllerAnimated(true) { () -> Void in
+            self.sendData(images)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +67,6 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func initializeDecoration() {
-        pictureEditor.viewController = self
-        
         confirmButton.layer.cornerRadius = 5
         
         if assets != nil {
@@ -148,5 +156,20 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func clickConfirmButton(sender: AnyObject) {
+        var images: [UIImage] = []
+        if imageButtons.count > 0 {
+            for index in 0...imageButtons.count-1 {
+                images.append((imageButtons[index].imageView?.image)!)
+            }
+        }
+        dismissViewController(images)
+    }
+    
+    
+    
+    
+    
     
 }
