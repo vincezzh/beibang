@@ -12,6 +12,7 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var onDataAvailable : ((images: [UIImage]) -> ())?
     var assets: [DKAsset]?
+    var images: [UIImage] = []
     var imageButtons: [UIButton] = []
     var currentSelectedImageIndex = 0
     
@@ -63,13 +64,14 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
             self.initializeAction()
         }
         
-        self.presentViewController(pickerController, animated: false, completion: nil)
+        self.presentViewController(pickerController, animated: true, completion: nil)
     }
     
     func initializeDecoration() {
         confirmButton.layer.cornerRadius = 5
         
         if assets != nil {
+            self.images.removeAll()
             self.imageButtons.removeAll()
             
             let imageButtonWidth = CGFloat(56)
@@ -81,9 +83,12 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
             }
             for index in 0...assets!.count-1 {
                 assets![index].fetchOriginalImage(true, completeBlock: { (image, info) -> Void in
+                    self.images.append(image!)
+                    
                     let imageButton: UIButton = UIButton()
                     imageButton.tag = index
-                    imageButton.setImage(image, forState: UIControlState.Normal)
+                    imageButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+                    imageButton.setImage(self.resizeImage(image!, scale: 0.1), forState: UIControlState.Normal)
                     imageButton.frame = CGRectMake(CGFloat(startX + index * (Int(imageButtonWidth) + 4)), 4, imageButtonWidth, imageButtonHeight)
                     imageButton.addTarget(self, action: "clickImageButton:", forControlEvents: UIControlEvents.TouchUpInside)
                     self.imageListScrollView.addSubview(imageButton)
@@ -117,8 +122,19 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    func resizeImage(image: UIImage, scale: CGFloat) -> UIImage {
+        let newWidth = image.size.width * scale
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight))
+        image.drawInRect(CGRectMake(0, 0, newWidth, newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
     func clickImageButton(sender: UIButton!) {
-        selectedImageView.image = sender.imageView?.image
+        selectedImageView.image = images[sender.tag]
         
         if imageButtons.count > 0 {
             for index in 0...imageButtons.count-1 {
@@ -152,18 +168,13 @@ class PictureListViewController: UIViewController, UIGestureRecognizerDelegate {
     func editorCompletionBlock(result: IMGLYEditorResult, image: UIImage?) {
         if image != nil {
             selectedImageView.image = image
-            imageButtons[currentSelectedImageIndex].setImage(image, forState: UIControlState.Normal)
+            images[currentSelectedImageIndex] = image!
+            imageButtons[currentSelectedImageIndex].setImage(resizeImage(image!, scale: 0.1), forState: UIControlState.Normal)
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func clickConfirmButton(sender: AnyObject) {
-        var images: [UIImage] = []
-        if imageButtons.count > 0 {
-            for index in 0...imageButtons.count-1 {
-                images.append((imageButtons[index].imageView?.image)!)
-            }
-        }
         dismissViewController(images)
     }
     
