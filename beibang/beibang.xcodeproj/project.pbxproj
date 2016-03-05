@@ -1236,6 +1236,7 @@
 				TargetAttributes = {
 					61113E5F1C698B7A0051538D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3DX4V9XK3E;
 					};
 					61113E761C698B7A0051538D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1719,6 +1720,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = beibang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;
@@ -1731,6 +1733,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = beibang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;
