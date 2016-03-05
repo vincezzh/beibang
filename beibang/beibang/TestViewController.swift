@@ -10,10 +10,18 @@ import UIKit
 
 class TestViewController: UIViewController {
 
+    var allImages: [UIImage] = []
+    @IBOutlet weak var previewCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        previewCollectionView.dataSource = self
+        previewCollectionView.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @IBAction func test(sender: AnyObject) {
@@ -21,11 +29,8 @@ class TestViewController: UIViewController {
     }
     
     func doPicturesWithData(images: [UIImage]) {
-        if images.count > 0 {
-            for index in 0...images.count-1 {
-                print(images[index])
-            }
-        }
+        allImages = images
+        previewCollectionView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -40,6 +45,49 @@ class TestViewController: UIViewController {
             }
         }
     }
-    
 
+}
+
+extension TestViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = previewCollectionView.bounds.size.width / 2
+        return CGSizeMake(width, width)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: NSInteger) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: NSInteger) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: NSInteger) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return allImages.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! PreviewCell
+        let imageView = cell.previewImageView
+        imageView.image = allImages[indexPath.row]
+        
+        return cell
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

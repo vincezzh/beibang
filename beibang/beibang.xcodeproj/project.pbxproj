@@ -29,6 +29,7 @@
 		612C4B891C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */; };
 		612C4B8B1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */; };
 		612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */; };
+		612CD5E51C8B65EF009711B6 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612CD5E41C8B65EF009711B6 /* PreviewCell.swift */; };
 		6162E4C51C80A42B00ED594D /* ChaoZhiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6162E4C41C80A42B00ED594D /* ChaoZhiView.xib */; };
 		6162E4C71C80A43700ED594D /* ChaoZhiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162E4C61C80A43700ED594D /* ChaoZhiView.swift */; };
 		6162E4CA1C80A67600ED594D /* ArticleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */; };
@@ -331,6 +332,7 @@
 		612C4B881C7ACD86004A3D2B /* WoDeGuanZhuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoDeGuanZhuViewController.swift; sourceTree = "<group>"; };
 		612C4B8A1C7ACD96004A3D2B /* ZhangHuAnQuanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhangHuAnQuanViewController.swift; sourceTree = "<group>"; };
 		612C4B8C1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LianXiPingTaiViewController.swift; sourceTree = "<group>"; };
+		612CD5E41C8B65EF009711B6 /* PreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		6162E4C41C80A42B00ED594D /* ChaoZhiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChaoZhiView.xib; sourceTree = "<group>"; };
 		6162E4C61C80A43700ED594D /* ChaoZhiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaoZhiView.swift; sourceTree = "<group>"; };
 		6162E4C81C80A67600ED594D /* ArticleTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTitleCell.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 			children = (
 				61139C521C868D77009100EE /* PictureListViewController.swift */,
 				611712241C87E2CC00720C08 /* TestViewController.swift */,
+				612CD5E41C8B65EF009711B6 /* PreviewCell.swift */,
 			);
 			name = PictureComponent;
 			sourceTree = "<group>";
@@ -1236,6 +1239,7 @@
 				TargetAttributes = {
 					61113E5F1C698B7A0051538D = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3DX4V9XK3E;
 					};
 					61113E761C698B7A0051538D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1517,6 +1521,7 @@
 				612C4B8D1C7ACDA1004A3D2B /* LianXiPingTaiViewController.swift in Sources */,
 				61842D2C1C853F2800FBEF64 /* IMGLYFallFilter.swift in Sources */,
 				61842D7D1C853F2800FBEF64 /* IMGLYZoomingImageView.swift in Sources */,
+				612CD5E51C8B65EF009711B6 /* PreviewCell.swift in Sources */,
 				61842D3B1C853F2800FBEF64 /* IMGLYLomo100Filter.swift in Sources */,
 				612C4B871C7ACD79004A3D2B /* WoDeShouCangViewController.swift in Sources */,
 				61C39A2B1C83F2AE00F51443 /* DKPermissionView.swift in Sources */,
@@ -1719,6 +1724,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = beibang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;
@@ -1731,6 +1737,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = beibang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akhaltech.beibang;

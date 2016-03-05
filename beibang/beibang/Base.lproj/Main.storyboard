@@ -19,20 +19,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKr-qN-ebE">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="248" y="74" width="104" height="30"/>
+                                <state key="normal" title="Select Pictures"/>
                                 <connections>
                                     <action selector="test:" destination="bNr-rZ-xcI" eventType="touchUpInside" id="NIf-4t-MRk"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-Vf-Vdh">
+                                <rect key="frame" x="20" y="124" width="560" height="456"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="aUW-tJ-jO5">
+                                    <size key="itemSize" width="90" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="DJl-ho-PKf" customClass="PreviewCell" customModule="beibang" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-tO-POk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Xcc-tO-POk" firstAttribute="top" secondItem="DJl-ho-PKf" secondAttribute="topMargin" constant="-8" id="1Cq-fR-egM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Xcc-tO-POk" secondAttribute="trailing" constant="-8" id="QY5-TH-0Jf"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Xcc-tO-POk" secondAttribute="bottom" constant="-8" id="kSY-Ov-CSL"/>
+                                            <constraint firstItem="Xcc-tO-POk" firstAttribute="leading" secondItem="DJl-ho-PKf" secondAttribute="leadingMargin" constant="-8" id="xA9-gD-AHL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="previewImageView" destination="Xcc-tO-POk" id="MHB-2t-H94"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yKr-qN-ebE" firstAttribute="centerX" secondItem="yNV-xm-Fdt" secondAttribute="centerX" id="0zk-Nd-5Yl"/>
+                            <constraint firstItem="yKr-qN-ebE" firstAttribute="top" secondItem="PXR-sT-jGL" secondAttribute="bottom" constant="54" id="7iZ-Uc-lMc"/>
                             <constraint firstItem="yKr-qN-ebE" firstAttribute="centerX" secondItem="yNV-xm-Fdt" secondAttribute="centerX" id="8i7-3C-SGH"/>
+                            <constraint firstItem="b2o-S8-7um" firstAttribute="top" secondItem="z8n-Vf-Vdh" secondAttribute="bottom" constant="20" id="GR9-S9-PdN"/>
+                            <constraint firstAttribute="trailing" secondItem="z8n-Vf-Vdh" secondAttribute="trailing" constant="20" id="dn9-WI-Pto"/>
                             <constraint firstItem="yKr-qN-ebE" firstAttribute="centerY" secondItem="yNV-xm-Fdt" secondAttribute="centerY" id="fSx-gw-jhA"/>
+                            <constraint firstItem="z8n-Vf-Vdh" firstAttribute="top" secondItem="yKr-qN-ebE" secondAttribute="bottom" constant="20" id="l1m-Tb-bQj"/>
+                            <constraint firstItem="z8n-Vf-Vdh" firstAttribute="leading" secondItem="yNV-xm-Fdt" secondAttribute="leading" constant="20" id="mZg-M5-3HQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8i7-3C-SGH"/>
+                                <exclude reference="fSx-gw-jhA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="previewCollectionView" destination="z8n-Vf-Vdh" id="rmz-zS-hp9"/>
                         <segue destination="X4p-Ob-HOA" kind="presentation" identifier="displayPictureEditorSegue" id="0qL-no-wdq"/>
                     </connections>
                 </viewController>
