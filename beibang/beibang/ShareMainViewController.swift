@@ -145,13 +145,32 @@ class ShareMainViewController: UIViewController {
                     tougao1.titleImageUrl = "http://www.akhaltech.com/img/profile.png"
                     tougao1.titleText = "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！"
                     tougao1.contentText = NSAttributedString(string: "发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！发现了什么好价格和不能错过的优惠活动？赶快在这里推荐给各位爸爸妈妈们吧！")
-                    tougao1.tagLabelArray = ["一二三四", "恭喜发财", "好运连连", "绝对划算", "上门看看"]
+                    tougao1.tagLabelArray = ["一二三四", "恭喜发财"]
                     let author1 = User()
-                    author1.name = "潮妈小辣椒"
-                    author1.avatarUrl = "http://cdn.bmwblog.com/wp-content/uploads/BMW-10-750x500.jpg"
-                    author.followerNumber = "💜87"
-                    tougao1.author = author
-                    tougao1.itemLevel = 5
+                    author1.name = "熊爸爸"
+                    author1.avatarUrl = "http://www.bmw.ca/content/dam/bmw/common/all-models/3-series/sedan/2015/at-a-glance/3-series-m-sport-package-04.jpg/jcr:content/renditions/cq5dam.resized.img.485.low.time1447942782786.jpg"
+                    author1.followerNumber = "💜200"
+                    tougao1.author = author1
+                    tougao1.itemLevel = 4
+                    var likes1: [User] = []
+                    for _ in 0...12 {
+                        let u1 = User()
+                        u1.avatarUrl = "http://vignette1.wikia.nocookie.net/doratheexplorer/images/3/3d/Dora_photo9.png"
+                        likes1.append(u1)
+                    }
+                    tougao1.likeUsers = likes1
+                    var comments1: [Comment] = []
+                    for _ in 0...5 {
+                        let c1 = Comment()
+                        c1.content = "发现了什么好价格和不能错过的优惠活动"
+                        c1.postDate = "2016-12-20"
+                        let u = User()
+                        u.name = "Eason妈妈"
+                        u.avatarUrl = "http://vignette1.wikia.nocookie.net/doratheexplorer/images/3/3d/Dora_photo9.png"
+                        c1.user = u
+                        comments1.append(c1)
+                    }
+                    tougao1.comments = comments1
                     touGaos.append(tougao1)
                     
                     
@@ -227,7 +246,9 @@ class ShareMainViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func clickLetterButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     
     
